@@ -1,22 +1,28 @@
+import 'package:azkar/constants.dart';
+import 'package:azkar/loading_screen.dart';
+import 'package:azkar/model.dart';
+import 'package:azkar/repo.dart';
+import 'package:azkar/ui/arabic_numbers.dart';
+import 'package:azkar/ui/zikr_item/card.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const AzkarApp());
+  runApp(const ZikrApp());
 }
 
-class AzkarApp extends StatelessWidget {
-  const AzkarApp({super.key});
+class ZikrApp extends StatelessWidget {
+  const ZikrApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'أذكار المسلم',
+      title: Constants.appName,
       theme: ThemeData(
         primarySwatch: Colors.green,
         fontFamily: 'Amiri', // Arabic font (you'll need to add this)
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(fontSize: 18),
-          bodyMedium: TextStyle(fontSize: 16),
+          bodyLarge: TextStyle(fontSize: 20),
+          bodyMedium: TextStyle(fontSize: 18),
           titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
@@ -24,44 +30,6 @@ class AzkarApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
-}
-
-// Data Models
-class AzkarCategory {
-  final String id;
-  final String title;
-  final String subtitle;
-  final List<Zikr> azkar;
-  final IconData icon;
-
-  AzkarCategory({
-    required this.id,
-    required this.title,
-    required this.subtitle,
-    required this.azkar,
-    required this.icon,
-  });
-}
-
-class Zikr {
-  final String id;
-  final String text;
-  final int repetitions;
-  final String? notes;
-  final String? reference;
-  int currentCount;
-
-  Zikr({
-    required this.id,
-    required this.text,
-    required this.repetitions,
-    this.notes,
-    this.reference,
-    this.currentCount = 0,
-  });
-
-  bool get isCompleted => currentCount >= repetitions;
-  double get progress => repetitions > 0 ? currentCount / repetitions : 1.0;
 }
 
 // Categories Screen
@@ -73,74 +41,34 @@ class CategoriesScreen extends StatefulWidget {
 }
 
 class _CategoriesScreenState extends State<CategoriesScreen> {
-  double fontSize = 18.0;
+  List<ZikrCategory> categories = [];
+  bool isLoading = true;
+  double fontSize = AppTheme.fontSize;
 
-  final List<AzkarCategory> categories = [
-    AzkarCategory(
-      id: 'morning',
-      title: 'أذكار الصباح',
-      subtitle: 'Morning Supplications',
-      icon: Icons.wb_sunny,
-      azkar: [
-        Zikr(
-          id: 'morning_1',
-          text: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',
-          repetitions: 9,
-          notes: 'Say when starting morning azkar',
-        ),
-        Zikr(
-          id: 'morning_2',
-          text: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
-          repetitions: 1,
-        ),
-        // Add more azkar...
-      ],
-    ),
-    AzkarCategory(
-      id: 'evening',
-      title: 'أذكار المساء',
-      subtitle: 'Evening Supplications',
-      icon: Icons.nights_stay,
-      azkar: [
-        Zikr(
-          id: 'evening_1',
-          text: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',
-          repetitions: 1,
-        ),
-        Zikr(
-          id: 'morning_2',
-          text: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
-          repetitions: 2,
-        ),
-        Zikr(
-          id: 'evening_1',
-          text: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',
-          repetitions: 1,
-        ),
-        // Add more azkar...
-      ],
-    ),
-    AzkarCategory(
-      id: 'sleep',
-      title: 'أذكار النوم',
-      subtitle: 'الأذكار الذي يقرأها المصلي قبل النوم',
-      icon: Icons.bedtime,
-      azkar: [
-        Zikr(
-          id: 'sleep_1',
-          text: 'بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي وَبِكَ أَرْفَعُهُ',
-          repetitions: 1,
-        ),
-        // Add more azkar...
-      ],
-    ),
-  ];
+  @override
+  void initState() {
+    super.initState();
+    _loadCategories();
+  }
+
+  void _loadCategories() async {
+    final repo = ZikrRepository();
+    final loadedCategories = await repo.loadIndex();
+    setState(() {
+      categories = loadedCategories;
+      isLoading = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return const LoadingScreen(title: Constants.appName);
+    }
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('أذكار المسلم'),
+        title: const Text(Constants.appName),
         centerTitle: true,
         backgroundColor: Colors.green.shade700,
         foregroundColor: Colors.white,
@@ -161,10 +89,12 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             elevation: 2,
             child: ListTile(
               contentPadding: const EdgeInsets.all(16),
-              leading: CircleAvatar(
-                backgroundColor: Colors.green.shade100,
-                child: Icon(category.icon, color: Colors.green.shade700),
-              ),
+              // leading: category.icon != null
+              //     ? CircleAvatar(
+              //         backgroundColor: Colors.green.shade100,
+              //         child: Icon(category.icon, color: Colors.green.shade700),
+              //       )
+              //     : null,
               title: Text(
                 category.title,
                 style: TextStyle(
@@ -173,23 +103,23 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 ),
                 textDirection: TextDirection.rtl,
               ),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  const SizedBox(height: 4),
-                  Text(
-                    category.subtitle,
-                    style: TextStyle(fontSize: fontSize - 8),
-                    textDirection: TextDirection.rtl,
-                  ),
-                ],
-              ),
+              // subtitle: Column(
+              //   crossAxisAlignment: CrossAxisAlignment.end,
+              //   children: [
+              //     const SizedBox(height: 4),
+              //     Text(
+              //       category.subtitle,
+              //       style: TextStyle(fontSize: fontSize - 8),
+              //       textDirection: TextDirection.rtl,
+              //     ),
+              //   ],
+              // ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AzkarDetailScreen(
+                    builder: (context) => ZikrCategoryDetailScreen(
                       category: category,
                       fontSize: fontSize,
                       onFontSizeChanged: (newSize) {
@@ -248,15 +178,25 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
       ),
     );
   }
+
+  IconData _getIcon(String title) {
+    if (title.contains('الصباح')) return Icons.wb_sunny;
+    if (title.contains('المساء')) return Icons.nights_stay;
+    if (title.contains('النوم')) return Icons.bedtime;
+    if (title.contains('المسجد')) return Icons.mosque;
+    if (title.contains('الطعام')) return Icons.restaurant;
+    if (title.contains('السفر')) return Icons.flight;
+    return Icons.menu_book;
+  }
 }
 
 // Azkar Detail Screen
-class AzkarDetailScreen extends StatefulWidget {
-  final AzkarCategory category;
+class ZikrCategoryDetailScreen extends StatefulWidget {
+  final ZikrCategory category;
   final double fontSize;
   final Function(double) onFontSizeChanged;
 
-  const AzkarDetailScreen({
+  const ZikrCategoryDetailScreen({
     super.key,
     required this.category,
     required this.fontSize,
@@ -264,23 +204,53 @@ class AzkarDetailScreen extends StatefulWidget {
   });
 
   @override
-  State<AzkarDetailScreen> createState() => _AzkarDetailScreenState();
+  State<ZikrCategoryDetailScreen> createState() =>
+      _ZikrCategoryDetailScreenState();
 }
 
-class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
+class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
   late PageController _pageController;
   int currentIndex = 0;
-  late double fontSize; // Add this local state
-
+  double fontSize = 0; // Add this local state
+  Map<int, int> zikrCountMap = {};
+  List<ZikrItem> zikr = [];
+  bool isLoading = true;
   @override
   void initState() {
     super.initState();
     _pageController = PageController();
+    _loadZikr();
     fontSize = widget.fontSize; // Initialize with widget value
+  }
+
+  void _loadZikr() async {
+    final repo = ZikrRepository();
+    final loadedZikr = await repo.loadCategoryZikr(widget.category.id);
+
+    zikrCountMap = <int, int>{};
+    for (final zikr in loadedZikr) {
+      zikrCountMap[zikr.id] = 0;
+    }
+
+    setState(() {
+      zikr = loadedZikr;
+      zikrCountMap = zikrCountMap;
+      isLoading = false;
+    });
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return LoadingScreen(title: widget.category.title);
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.category.title),
@@ -302,7 +272,7 @@ class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
             child: Column(
               children: [
                 Text(
-                  '${currentIndex + 1} من ${widget.category.azkar.length}',
+                  '${arabicNumber(currentIndex + 1)} من ${arabicNumber(zikr.length)}',
                   style: TextStyle(
                     fontSize: fontSize - 2,
                     fontWeight: FontWeight.bold,
@@ -311,7 +281,7 @@ class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
                 ),
                 const SizedBox(height: 8),
                 LinearProgressIndicator(
-                  value: (currentIndex + 1) / widget.category.azkar.length,
+                  value: (currentIndex + 1) / zikr.length,
                   backgroundColor: Colors.grey.shade300,
                   valueColor: AlwaysStoppedAnimation<Color>(
                     Colors.green.shade600,
@@ -324,25 +294,27 @@ class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
           Expanded(
             child: PageView.builder(
               controller: _pageController,
-              itemCount: widget.category.azkar.length,
+              itemCount: zikr.length,
               onPageChanged: (index) {
                 setState(() {
                   currentIndex = index;
                 });
               },
               itemBuilder: (context, index) {
-                final zikr = widget.category.azkar[index];
-                return AzkarCard(
+                final zikr = this.zikr[index];
+                return ZikrItemCard(
                   zikr: zikr,
                   fontSize: fontSize,
-                  onCountChanged: () => setState(() {}),
+                  currentCount: zikrCountMap[zikr.id] ?? 0,
+                  onCountChanged: (count) => setState(() {
+                    zikrCountMap[zikr.id] = count;
+                  }),
                   onCompleted: () {
                     // Auto-navigate to next zikr after a short delay
-                    Future.delayed(const Duration(milliseconds: 400), () {
-                      // Debug
-                      if (currentIndex < widget.category.azkar.length - 1) {
+                    Future.delayed(const Duration(milliseconds: 50), () {
+                      if (currentIndex < this.zikr.length - 1) {
                         _pageController.nextPage(
-                          duration: const Duration(milliseconds: 300),
+                          duration: const Duration(milliseconds: 400),
                           curve: Curves.easeInOut,
                         );
                       }
@@ -370,7 +342,7 @@ class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
                   child: const Text('السابق'),
                 ),
                 ElevatedButton(
-                  onPressed: currentIndex < widget.category.azkar.length - 1
+                  onPressed: currentIndex < this.zikr.length - 1
                       ? () {
                           _pageController.nextPage(
                             duration: const Duration(milliseconds: 300),
@@ -437,180 +409,6 @@ class _AzkarDetailScreenState extends State<AzkarDetailScreen> {
             child: const Text('موافق'),
           ),
         ],
-      ),
-    );
-  }
-}
-
-// Individual Azkar Card
-class AzkarCard extends StatelessWidget {
-  final Zikr zikr;
-  final double fontSize;
-  final VoidCallback onCountChanged;
-  final VoidCallback onCompleted;
-
-  const AzkarCard({
-    super.key,
-    required this.zikr,
-    required this.fontSize,
-    required this.onCountChanged,
-    required this.onCompleted,
-  });
-
-  // Replace the AzkarCard build method:
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(16),
-      child: GestureDetector(
-        onTap: () {
-          if (zikr.currentCount < zikr.repetitions) {
-            zikr.currentCount++;
-            onCountChanged();
-          }
-          // Check if just completed
-          if (zikr.currentCount == zikr.repetitions) {
-            onCompleted();
-          }
-        },
-        onLongPress: () {
-          // Reset on long press
-          zikr.currentCount = 0;
-          onCountChanged();
-        },
-        child: Card(
-          elevation: 4,
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                // Zikr text
-                Expanded(
-                  child: Center(
-                    child: SingleChildScrollView(
-                      child: Text(
-                        zikr.text,
-                        style: TextStyle(
-                          fontSize: fontSize,
-                          height: 1.8,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        textAlign: TextAlign.center,
-                        textDirection: TextDirection.rtl,
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                // Notes (if any)
-                if (zikr.notes != null) ...[
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Colors.blue.shade50,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                      zikr.notes!,
-                      style: TextStyle(
-                        fontSize: fontSize - 4,
-                        color: Colors.blue.shade700,
-                        fontStyle: FontStyle.italic,
-                      ),
-                      textDirection: TextDirection.rtl,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                ],
-
-                // Counter section
-                if (zikr.repetitions > 1) ...[
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: zikr.isCompleted
-                          ? Colors.green.shade50
-                          : Colors.blue.shade50,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: zikr.isCompleted ? Colors.green : Colors.blue,
-                        width: 2,
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
-                          'العدد: ${zikr.currentCount} / ${zikr.repetitions}',
-                          style: TextStyle(
-                            fontSize: fontSize - 2,
-                            fontWeight: FontWeight.bold,
-                            color: zikr.isCompleted
-                                ? Colors.green.shade700
-                                : Colors.blue.shade700,
-                          ),
-                          textDirection: TextDirection.rtl,
-                        ),
-                        const SizedBox(height: 12),
-                        LinearProgressIndicator(
-                          value: zikr.progress,
-                          backgroundColor: Colors.grey.shade300,
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            zikr.isCompleted ? Colors.green : Colors.blue,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          zikr.isCompleted
-                              ? 'مكتمل ✓'
-                              : 'اضغط للعد • اضغط مطولاً للإعادة',
-                          style: TextStyle(
-                            fontSize: fontSize - 6,
-                            color: Colors.grey.shade600,
-                            fontWeight: FontWeight.w500,
-                          ),
-                          textAlign: TextAlign.center,
-                          textDirection: TextDirection.rtl,
-                        ),
-                      ],
-                    ),
-                  ),
-                ] else ...[
-                  // Single repetition
-                  if (zikr.isCompleted)
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 32,
-                        vertical: 16,
-                      ),
-                      decoration: BoxDecoration(
-                        color: zikr.isCompleted
-                            ? Colors.green.shade50
-                            : Colors.blue.shade50,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          color: zikr.isCompleted ? Colors.green : Colors.blue,
-                          width: 2,
-                        ),
-                      ),
-                      child: Text(
-                        'مكتمل ✓',
-                        style: TextStyle(
-                          fontSize: fontSize - 2,
-                          fontWeight: FontWeight.bold,
-                          color: zikr.isCompleted
-                              ? Colors.green.shade700
-                              : Colors.blue.shade700,
-                        ),
-                        textDirection: TextDirection.rtl,
-                      ),
-                    ),
-                ],
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }
