@@ -1,9 +1,6 @@
 // Individual Azkar Card
-import 'dart:ui';
-
+import 'package:azkar/constants.dart';
 import 'package:azkar/model.dart';
-import 'package:azkar/ui/zikr_item/complete_marker.dart';
-import 'package:azkar/ui/zikr_item/counter.dart';
 import 'package:flutter/material.dart';
 
 class ZikrItemCard extends StatelessWidget {
@@ -26,7 +23,7 @@ class ZikrItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
       child: GestureDetector(
         onTap: () {
           if (currentCount < zikr.count) {
@@ -37,61 +34,21 @@ class ZikrItemCard extends StatelessWidget {
             onCompleted();
           }
         },
-        onLongPress: () {
-          // Reset on long press
-          onCountChanged(0);
-        },
-        child: Card(
-          elevation: 4,
+        // onLongPress: () {
+        //   // Reset on long press
+        //   onCountChanged(0);
+        // },
+        child: Card.outlined(
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: AppTheme.primaryColor),
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+
           child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              children: [
-                // Zikr text
-                ...buildZikrText(),
-
-                // const SizedBox(height: 20),
-                // Notes (if any)
-                // if (widget.zikr.notes != null) ...[
-                //   Container(
-                //     padding: const EdgeInsets.all(12),
-                //     decoration: BoxDecoration(
-                //       color: Colors.blue.shade50,
-                //       borderRadius: BorderRadius.circular(8),
-                //     ),
-                //     child: Text(
-                //       widget.zikr.notes!,
-                //       style: TextStyle(
-                //         fontSize: widget.fontSize - 4,
-                //         color: Colors.blue.shade700,
-                //         fontStyle: FontStyle.italic,
-                //       ),
-                //       textDirection: TextDirection.rtl,
-                //     ),
-                //   ),
-                //   const SizedBox(height: 20),
-                // ],
-
-                // Add an expanded to fill the space
-                Expanded(child: Container()),
-
-                // Counter section
-                if (zikr.count > 1) ...[
-                  ZikrItemCounter(
-                    count: currentCount,
-                    maxCount: zikr.count,
-                    isCompleted: isCompleted,
-                    fontSize: fontSize,
-                  ),
-                ] else ...[
-                  // Single repetition
-                  if (isCompleted)
-                    ZikrItemCompleteMarker(
-                      isCompleted: isCompleted,
-                      fontSize: fontSize,
-                    ),
-                ],
-              ],
+            padding: const EdgeInsets.all(16),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(children: buildZikrTextContentWidgets()),
             ),
           ),
         ),
@@ -99,12 +56,67 @@ class ZikrItemCard extends StatelessWidget {
     );
   }
 
-  List<Widget> buildZikrText() {
-    return zikr.contents
-        .map(
-          (content) => Text(content.text, style: TextStyle(fontSize: fontSize)),
-        )
-        .toList();
+  List<Widget> buildZikrTextContentWidgets() {
+    final widgets = <Widget>[];
+
+    final textCategoryStyle = TextStyle(
+      fontSize: fontSize,
+      // fontFamily: AppTheme.textFontFamily,
+    );
+    final countCategoryStyle = TextStyle(
+      fontSize: fontSize * 0.6,
+      color: AppTheme.mutedColor.shade500,
+    );
+    final quranCategoryStyle = TextStyle(
+      fontSize: fontSize,
+      fontFamily: AppTheme.quranFontFamily,
+      // fontWeight: FontWeight.bold,
+    );
+    final forewordCategoryStyle = TextStyle(
+      fontSize: fontSize * 0.8,
+      color: AppTheme.mutedColor.shade700,
+      fontFamily: AppTheme.quranFontFamily,
+    );
+
+    for (final content in zikr.contents) {
+      var style = textCategoryStyle;
+
+      if (content.category == ZikrItemContentCategory.text) {
+        style = textCategoryStyle;
+      } else if (content.category == ZikrItemContentCategory.count) {
+        style = countCategoryStyle;
+      } else if (content.category == ZikrItemContentCategory.quran) {
+        style = quranCategoryStyle;
+      } else if (content.category == ZikrItemContentCategory.foreword) {
+        style = forewordCategoryStyle;
+      }
+
+      widgets.add(
+        Text(
+          content.text,
+          style: style,
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
+        ),
+      );
+
+      if (content.category == ZikrItemContentCategory.quran) {
+        widgets.add(const SizedBox(height: 32));
+      }
+
+      if (content.category == ZikrItemContentCategory.foreword) {
+        // Add horizontal line
+        widgets.add(const SizedBox(height: 12));
+        // widgets.add(const SizedBox(height: 16));
+      }
+
+      // Add space before text items
+      if (content.category == ZikrItemContentCategory.text) {
+        widgets.add(const SizedBox(height: 32));
+      }
+    }
+
+    return widgets;
   }
 
   bool get isCompleted => currentCount == zikr.count;

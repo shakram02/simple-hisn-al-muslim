@@ -1,3 +1,4 @@
+import 'package:azkar/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatelessWidget {
@@ -10,8 +11,8 @@ class LoadingScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
-        backgroundColor: Colors.green.shade700,
-        foregroundColor: Colors.white,
+        backgroundColor: AppTheme.primaryColor.shade700,
+        foregroundColor: AppTheme.whiteColor,
       ),
       body: const Center(child: CircularProgressIndicator()),
     );
