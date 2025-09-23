@@ -1,18 +1,22 @@
 CREATE TABLE zikr_categories (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL
+    title TEXT NOT NULL,
+    category_order INTEGER NOT NULL,
+    locale VARCHAR(8) NOT NULL
 );
 
 CREATE TABLE zikr_items (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category_id INTEGER NOT NULL,
-    audio TEXT,
+    item_order INTEGER NOT NULL,
+    audio_url TEXT,
     repeat INTEGER NOT NULL
 );
 
 CREATE TABLE zikr_item_content (
     id INTEGER PRIMARY KEY,
     zikr_item_id INTEGER NOT NULL,
+    content_order INTEGER NOT NULL,
     text TEXT NOT NULL,
     -- Category is an enum of text, count, quran
     category TEXT NOT NULL CHECK (

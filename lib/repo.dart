@@ -44,8 +44,15 @@ class ZikrRepository {
     final List<Map<String, dynamic>> maps = await db.query('zikr_categories');
 
     return maps
-        .map((map) => ZikrCategory(id: map['id'], title: map['title']))
-        .toList();
+        .map(
+          (map) => ZikrCategory(
+            id: map['id'],
+            title: map['title'],
+            order: map['category_order'],
+          ),
+        )
+        .toList()
+      ..sort((a, b) => a.order.compareTo(b.order));
   }
 
   Future<List<ZikrItem>> loadCategoryZikr(int categoryId) async {
@@ -66,34 +73,40 @@ class ZikrRepository {
         'zikr_item_content',
         where: 'zikr_item_id = ?',
         whereArgs: [item['id']],
-        orderBy: 'id',
+        orderBy: 'content_order',
       );
 
       final zikrItemId = item['id'];
-      final List<ZikrItemContent> contentsList = contents
-          .map(
-            (content) => ZikrItemContent(
-              id: content['id'],
-              zikrItemId: zikrItemId,
-              text: content['text'],
-              category: ZikrItemContentCategory.values.byName(
-                content['category'],
-              ),
-            ),
-          )
-          .toList();
+      final List<ZikrItemContent> contentsList =
+          contents
+              .map(
+                (content) => ZikrItemContent(
+                  id: content['id'],
+                  zikrItemId: zikrItemId,
+                  order: content['content_order'],
+                  text: content['text'],
+                  category: ZikrItemContentCategory.values.byName(
+                    content['category'],
+                  ),
+                ),
+              )
+              .toList()
+            ..sort((a, b) => a.order.compareTo(b.order));
 
-      if (contents.isNotEmpty) {
-        azkarList.add(
-          ZikrItem(
-            id: item['id'],
-            categoryId: categoryId,
-            contents: contentsList,
-            count: item['repeat'],
-            audio: item['audio'],
-          ),
-        );
+      if (contents.isEmpty) {
+        continue;
       }
+
+      azkarList.add(
+        ZikrItem(
+          id: item['id'],
+          categoryId: categoryId,
+          contents: contentsList,
+          count: item['repeat'],
+          audioUrl: item['audio_url'],
+          order: item['item_order'],
+        ),
+      );
     }
 
     return azkarList;
