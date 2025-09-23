@@ -1,3 +1,4 @@
+import 'package:azkar/constants.dart';
 import 'package:azkar/model.dart';
 import 'package:flutter/services.dart';
 
@@ -22,12 +23,12 @@ class ZikrRepository {
   Future<Database> _initDatabase() async {
     // Get the documents directory
     final databasesPath = await getDatabasesPath();
-    final path = join(databasesPath, 'doa.sqlite');
+    final path = join(databasesPath, Constants.databaseName);
 
     // Check if database exists
     if (!await File(path).exists()) {
       // Copy from assets to documents directory
-      final data = await rootBundle.load('doa.sqlite');
+      final data = await rootBundle.load(Constants.databaseName);
       final bytes = data.buffer.asUint8List(
         data.offsetInBytes,
         data.lengthInBytes,

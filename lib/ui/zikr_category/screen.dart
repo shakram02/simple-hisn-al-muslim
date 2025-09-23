@@ -2,8 +2,9 @@ import 'package:azkar/constants.dart';
 import 'package:azkar/loading_screen.dart';
 import 'package:azkar/model.dart';
 import 'package:azkar/repo.dart';
+import 'package:azkar/ui/app_bar.dart';
 import 'package:azkar/ui/arabic_numbers.dart';
-import 'package:azkar/ui/font_sizer/dialog.dart';
+import 'package:azkar/ui/settings/dialog.dart';
 import 'package:azkar/ui/zikr_category/complete_marker.dart';
 import 'package:azkar/ui/zikr_item/zikr_progress.dart';
 import 'package:azkar/ui/zikr_item/card.dart';
@@ -14,12 +15,13 @@ class ZikrCategoryDetailScreen extends StatefulWidget {
   final ZikrCategory category;
   final double fontSize;
   final Function(double) onFontSizeChanged;
-
+  final VoidCallback onThemeToggle;
   const ZikrCategoryDetailScreen({
     super.key,
     required this.category,
     required this.fontSize,
     required this.onFontSizeChanged,
+    required this.onThemeToggle,
   });
 
   @override
@@ -71,21 +73,18 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.category.title),
-        centerTitle: true,
-        backgroundColor: AppTheme.primaryColor.shade700,
-        foregroundColor: AppTheme.whiteColor,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.text_fields),
-            onPressed: () => showFontSizeDialog(context, fontSize, (newSize) {
-              setState(() {
-                fontSize = newSize;
-              });
-            }),
-          ),
-        ],
+      appBar: ZikrAppBar.getAppBar(
+        title: widget.category.title,
+        context: context,
+        onFontSizeChangeButtonPressed: () {
+          showFontSizeDialog(context, fontSize, (newSize) {
+            setState(() {
+              fontSize = newSize;
+              widget.onFontSizeChanged(newSize);
+            });
+          });
+        },
+        onThemeToggle: widget.onThemeToggle,
       ),
       body: Directionality(
         textDirection: TextDirection.rtl,
@@ -141,11 +140,15 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
                             _pageController.jumpToPage(currentIndex - 1);
                           }
                         : null,
-                    style: TextButton.styleFrom(
-                      foregroundColor: AppTheme.secondaryColor,
-                    ),
 
-                    child: const Text('السابق'),
+                    child: Text(
+                      'السابق',
+                      style: TextStyle(
+                        fontSize: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.fontSize,
+                      ),
+                    ),
                   ),
                   Text(
                     '${arabicNumber(currentIndex + 1)} من ${arabicNumber(categoryZikrList.length)}',
@@ -161,10 +164,14 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
                             );
                           }
                         : null,
-                    style: TextButton.styleFrom(
-                      foregroundColor: AppTheme.secondaryColor,
+                    child: Text(
+                      'التالي',
+                      style: TextStyle(
+                        fontSize: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.fontSize,
+                      ),
                     ),
-                    child: const Text('التالي'),
                   ),
                 ],
               ),

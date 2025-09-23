@@ -11,7 +11,9 @@ class ZikrItemCompleteMarker extends StatelessWidget {
       style: TextStyle(
         fontSize: AppTheme.noteFontSize,
         fontWeight: FontWeight.bold,
-        color: AppTheme.secondaryColor,
+        color: Theme.of(context).brightness == Brightness.dark
+            ? AppTheme.darkSecondary
+            : AppTheme.secondaryColor,
       ),
     );
   }

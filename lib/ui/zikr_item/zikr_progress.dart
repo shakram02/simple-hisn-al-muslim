@@ -31,6 +31,8 @@ class ZikrProgress extends StatelessWidget {
             // fontWeight: FontWeight.bold,
             color: isCompleted
                 ? AppTheme.secondaryColor
+                : Theme.of(context).brightness == Brightness.dark
+                    ? AppTheme.darkTextSecondary
                 : AppTheme.mutedColor.shade700,
           ),
         ),
@@ -38,7 +40,11 @@ class ZikrProgress extends StatelessWidget {
         LinearProgressIndicator(
           value: count / maxCount,
           backgroundColor: AppTheme.mutedColor.shade300,
-          valueColor: AlwaysStoppedAnimation<Color>(AppTheme.secondaryColor),
+          valueColor: AlwaysStoppedAnimation<Color>(
+            Theme.of(context).brightness == Brightness.dark
+                ? AppTheme.darkSecondary
+                : AppTheme.secondaryColor,
+          ),
         ),
       ],
     );

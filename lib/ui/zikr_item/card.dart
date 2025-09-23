@@ -40,7 +40,11 @@ class ZikrItemCard extends StatelessWidget {
         // },
         child: Card.outlined(
           shape: RoundedRectangleBorder(
-            side: BorderSide(color: AppTheme.primaryColor),
+            side: BorderSide(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? AppTheme.darkPrimary
+                  : AppTheme.primaryColor,
+            ),
             borderRadius: BorderRadius.circular(12.0),
           ),
 
@@ -48,7 +52,7 @@ class ZikrItemCard extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Column(children: buildZikrTextContentWidgets()),
+              child: Column(children: buildZikrTextContentWidgets(context)),
             ),
           ),
         ),
@@ -56,7 +60,7 @@ class ZikrItemCard extends StatelessWidget {
     );
   }
 
-  List<Widget> buildZikrTextContentWidgets() {
+  List<Widget> buildZikrTextContentWidgets(BuildContext context) {
     final widgets = <Widget>[];
 
     final textCategoryStyle = TextStyle(
@@ -65,7 +69,9 @@ class ZikrItemCard extends StatelessWidget {
     );
     final countCategoryStyle = TextStyle(
       fontSize: fontSize * 0.6,
-      color: AppTheme.mutedColor.shade500,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppTheme.darkMutedColor
+          : AppTheme.mutedColor.shade500,
     );
     final quranCategoryStyle = TextStyle(
       fontSize: fontSize,
@@ -74,7 +80,9 @@ class ZikrItemCard extends StatelessWidget {
     );
     final forewordCategoryStyle = TextStyle(
       fontSize: fontSize * 0.8,
-      color: AppTheme.mutedColor.shade700,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppTheme.darkMutedColor
+          : AppTheme.mutedColor.shade700,
       fontFamily: AppTheme.quranFontFamily,
     );
 
