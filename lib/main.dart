@@ -2,10 +2,13 @@ import 'package:azkar/constants.dart';
 import 'package:azkar/loading_screen.dart';
 import 'package:azkar/model.dart';
 import 'package:azkar/repo.dart';
+import 'package:azkar/ui/app_bar.dart';
 import 'package:azkar/ui/font_sizer/dialog.dart';
 import 'package:azkar/ui/font_sizer/font_pref.dart';
 import 'package:azkar/ui/zikr_category/screen.dart';
 import 'package:flutter/material.dart';
+
+const String locale = 'ar';
 
 void main() {
   runApp(const ZikrApp());
@@ -68,7 +71,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 
   Future<List<ZikrCategory>> _loadCategories() async {
     final repo = ZikrRepository();
-    return await repo.loadIndex();
+    return await repo.loadIndex(locale);
   }
 
   @override
@@ -78,22 +81,13 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(Constants.appName),
-        centerTitle: true,
-        backgroundColor: AppTheme.primaryColor.shade700,
-        foregroundColor: AppTheme.whiteColor,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.text_fields),
-            onPressed: () => showFontSizeDialog(context, fontSize, (newSize) {
-              setState(() {
-                fontSize = newSize;
-              });
-            }),
-          ),
-        ],
-      ),
+      appBar: ZikrAppBar.getAppBar(() {
+        showFontSizeDialog(context, fontSize, (newSize) {
+          setState(() {
+            fontSize = newSize;
+          });
+        });
+      }),
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: ListView.builder(

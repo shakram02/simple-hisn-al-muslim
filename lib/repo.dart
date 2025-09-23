@@ -38,10 +38,14 @@ class ZikrRepository {
     return await openDatabase(path, readOnly: true);
   }
 
-  Future<List<ZikrCategory>> loadIndex() async {
+  Future<List<ZikrCategory>> loadIndex(String locale) async {
     final db = await database;
 
-    final List<Map<String, dynamic>> maps = await db.query('zikr_categories');
+    final List<Map<String, dynamic>> maps = await db.query(
+      'zikr_categories',
+      where: 'locale = ?',
+      whereArgs: [locale],
+    );
 
     return maps
         .map(
@@ -67,15 +71,25 @@ class ZikrRepository {
 
     List<ZikrItem> azkarList = [];
 
+    final itemIds = zikrItems.map((item) => item['id']).toList();
+
+    final queryPlaceholders = List.generate(
+      itemIds.length,
+      (index) => '?',
+    ).join(',');
+
+    final List<Map<String, dynamic>> allContents = await db.query(
+      'zikr_item_content',
+      where: 'zikr_item_id IN ($queryPlaceholders)',
+      whereArgs: itemIds,
+      orderBy: 'content_order',
+    );
+
     for (final item in zikrItems) {
       // Get content for this zikr item
-      final List<Map<String, dynamic>> contents = await db.query(
-        'zikr_item_content',
-        where: 'zikr_item_id = ?',
-        whereArgs: [item['id']],
-        orderBy: 'content_order',
-      );
-
+      final contents = allContents
+          .where((content) => content['zikr_item_id'] == item['id'])
+          .toList();
       final zikrItemId = item['id'];
       final List<ZikrItemContent> contentsList =
           contents
