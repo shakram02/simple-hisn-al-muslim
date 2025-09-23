@@ -1,4 +1,3 @@
-import 'package:azkar/constants.dart';
 import 'package:azkar/loading_screen.dart';
 import 'package:azkar/model.dart';
 import 'package:azkar/repo.dart';

@@ -1,12 +1,6 @@
 import 'package:azkar/constants.dart';
-import 'package:azkar/loading_screen.dart';
-import 'package:azkar/model.dart';
-import 'package:azkar/repo.dart';
-import 'package:azkar/ui/app_bar.dart';
 import 'package:azkar/ui/category_list/screen.dart';
-import 'package:azkar/ui/settings/dialog.dart';
 import 'package:azkar/ui/settings/settings_pref.dart';
-import 'package:azkar/ui/zikr_category/screen.dart';
 import 'package:flutter/material.dart';
 
 const String locale = 'ar';
