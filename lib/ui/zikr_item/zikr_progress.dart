@@ -33,7 +33,6 @@ class ZikrProgress extends StatelessWidget {
                 ? AppTheme.secondaryColor
                 : AppTheme.mutedColor.shade700,
           ),
-          textDirection: TextDirection.rtl,
         ),
         const SizedBox(height: 8),
         LinearProgressIndicator(

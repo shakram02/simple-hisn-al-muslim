@@ -20,7 +20,6 @@ void showFontSizeDialog(
             Text(
               'مثال على النص',
               style: TextStyle(fontSize: fontSize),
-              textDirection: TextDirection.rtl,
             ),
             const SizedBox(height: 20),
             Slider(

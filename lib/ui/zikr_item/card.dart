@@ -95,7 +95,6 @@ class ZikrItemCard extends StatelessWidget {
         Text(
           content.text,
           style: style,
-          textDirection: TextDirection.rtl,
           textAlign: TextAlign.center,
         ),
       );

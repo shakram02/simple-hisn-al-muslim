@@ -13,7 +13,6 @@ class ZikrItemCompleteMarker extends StatelessWidget {
         fontWeight: FontWeight.bold,
         color: AppTheme.secondaryColor,
       ),
-      textDirection: TextDirection.rtl,
     );
   }
 }
