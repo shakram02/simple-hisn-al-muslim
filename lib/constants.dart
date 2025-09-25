@@ -34,7 +34,6 @@ class AppTheme {
       Colors.teal.shade300; // Lighter teal for dark mode
   static final Color darkSecondary = secondaryColor.shade300;
   static final Color darkBackground = Colors.grey.shade900;
-  static final Color darkSurface = Colors.grey.shade800;
   static final Color darkCardColor = Colors.grey.shade700;
   static final Color darkTextPrimary = Colors.white;
   static final Color darkTextSecondary = Colors.grey.shade400;
@@ -42,7 +41,10 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
-      primarySwatch: primaryColor,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: primaryColor,
+        brightness: Brightness.light,
+      ),
       textTheme: const TextTheme(
         bodyLarge: TextStyle(fontSize: 20),
         bodyMedium: TextStyle(fontSize: 18),

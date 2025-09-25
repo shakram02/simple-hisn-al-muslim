@@ -11,7 +11,9 @@ class ZikrAppBar {
     return AppBar(
       title: Text(title),
       centerTitle: true,
-      backgroundColor: AppTheme.primaryColor.shade700,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? AppTheme.primaryColor.shade900
+          : AppTheme.primaryColor.shade700,
       foregroundColor: AppTheme.whiteColor,
       actions: [
         IconButton(

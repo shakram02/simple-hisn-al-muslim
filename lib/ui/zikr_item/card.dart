@@ -38,11 +38,11 @@ class ZikrItemCard extends StatelessWidget {
         //   // Reset on long press
         //   onCountChanged(0);
         // },
-        child: Card.outlined(
+        child: Card(
           shape: RoundedRectangleBorder(
             side: BorderSide(
               color: Theme.of(context).brightness == Brightness.dark
-                  ? AppTheme.darkPrimary
+                  ? AppTheme.primaryColor.shade700
                   : AppTheme.primaryColor,
             ),
             borderRadius: BorderRadius.circular(12.0),
@@ -100,11 +100,7 @@ class ZikrItemCard extends StatelessWidget {
       }
 
       widgets.add(
-        Text(
-          content.text,
-          style: style,
-          textAlign: TextAlign.center,
-        ),
+        Text(content.text, style: style, textAlign: TextAlign.center),
       );
 
       if (content.category == ZikrItemContentCategory.quran) {

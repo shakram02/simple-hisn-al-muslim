@@ -6,6 +6,7 @@ import 'package:azkar/ui/app_bar.dart';
 import 'package:azkar/ui/settings/dialog.dart';
 import 'package:azkar/ui/zikr_category/screen.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 // Categories Screen
 class CategoriesScreen extends StatefulWidget {
@@ -76,50 +77,94 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
       ),
       body: Directionality(
         textDirection: TextDirection.rtl,
-        child: ListView.builder(
-          padding: const EdgeInsets.all(16),
-          itemCount: categories.length,
-          itemBuilder: (context, index) {
-            final category = categories[index];
-            return Card(
-              margin: const EdgeInsets.only(bottom: 12),
-              shape: RoundedRectangleBorder(
-                side: BorderSide(color: AppTheme.primaryColor),
-                borderRadius: BorderRadius.circular(12.0),
+        child: Column(
+          children: [
+            // Share button section
+            Container(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: _shareApp,
+                  icon: const Icon(Icons.share),
+                  label: const Text('شاركنا الأجر'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Theme.of(context).brightness == Brightness.dark
+                        ? AppTheme.primaryColor.shade700
+                        : AppTheme.primaryColor,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
               ),
-              elevation: 0,
-              child: ListTile(
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 8,
-                ),
-                title: Text(
-                  category.title,
-                  style: TextStyle(fontSize: widget.fontSize + 2),
-                ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? AppTheme.darkSecondary
-                      : AppTheme.secondaryColor,
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ZikrCategoryDetailScreen(
-                        category: category,
-                        fontSize: widget.fontSize,
-                        onFontSizeChanged: widget.onFontSizeChanged,
-                        onThemeToggle: widget.onThemeToggle,
+            ),
+            // Categories list
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                itemCount: categories.length,
+                itemBuilder: (context, index) {
+                  final category = categories[index];
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? AppTheme.primaryColor.shade700
+                            : AppTheme.primaryColor,
                       ),
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    elevation: 0,
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      title: Text(
+                        category.title,
+                        style: TextStyle(fontSize: widget.fontSize + 2),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? AppTheme.darkSecondary
+                            : AppTheme.secondaryColor,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ZikrCategoryDetailScreen(
+                              category: category,
+                              fontSize: widget.fontSize,
+                              onFontSizeChanged: widget.onFontSizeChanged,
+                              onThemeToggle: widget.onThemeToggle,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   );
                 },
               ),
-            );
-          },
+            ),
+          ],
         ),
+      ),
+    );
+  }
+
+  void _shareApp() {
+    SharePlus.instance.share(
+      ShareParams(
+        subject: 'تطبيق أذكار الصباح والمساء الميسرة',
+        text:
+            '🤲 أذكار الصباح والمساء الميسرة\n\nتطبيق مجاني يساعدك على المحافظة على الأذكار اليومية من حصن المسلم\n\n✨ مميزات التطبيق:\n• أذكار الصباح والمساء\n• أذكار النوم والاستيقاظ\n• عداد تلقائي للأذكار\n• يعمل بدون إنترنت\n• مجاني تماماً بدون إعلانات\n\nحمل التطبيق الآن:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar',
       ),
     );
   }
