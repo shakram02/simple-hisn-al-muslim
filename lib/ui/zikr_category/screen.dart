@@ -9,7 +9,6 @@ import 'package:azkar/ui/zikr_category/complete_marker.dart';
 import 'package:azkar/ui/zikr_item/zikr_progress.dart';
 import 'package:azkar/ui/zikr_item/card.dart';
 import 'package:flutter/material.dart';
-import 'package:in_app_review/in_app_review.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 // Azkar Detail Screen
@@ -191,14 +190,6 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
                               duration: const Duration(milliseconds: 450),
                               curve: Curves.easeInOut,
                             );
-
-                            // Check if the next page is the last zikr in the category
-                            final isNextPageLastZikr =
-                                currentIndex == categoryZikrList.length - 2;
-                            if (isNextPageLastZikr) {
-                              // Show rating dialog after a brief delay
-                              _rateApp();
-                            }
                           });
                         },
                       );
@@ -292,16 +283,3 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
   }
 }
 
-// Add this method to the _ZikrCategoryDetailScreenState class
-void _rateApp() async {
-  final InAppReview inAppReview = InAppReview.instance;
-
-  if (await inAppReview.isAvailable()) {
-    debugPrint('InAppReview is available');
-    inAppReview.requestReview();
-  } else {
-    // Fallback: open store listing
-    debugPrint('InAppReview is not available');
-    inAppReview.openStoreListing();
-  }
-}

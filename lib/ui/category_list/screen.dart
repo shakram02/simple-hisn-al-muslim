@@ -4,8 +4,10 @@ import 'package:azkar/model.dart';
 import 'package:azkar/repo.dart';
 import 'package:azkar/ui/app_bar.dart';
 import 'package:azkar/ui/settings/dialog.dart';
+import 'package:azkar/ui/settings/settings_pref.dart';
 import 'package:azkar/ui/zikr_category/screen.dart';
 import 'package:flutter/material.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:share_plus/share_plus.dart';
 
 // Categories Screen
@@ -43,12 +45,39 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         categories = loadedCategories;
         isLoading = false;
       });
+      _maybeRequestReview();
     } catch (e) {
       debugPrint('Error loading categories: $e');
       setState(() {
         isLoading = false; // Show empty state instead of hanging
       });
     }
+  }
+
+  Future<void> _maybeRequestReview() async {
+    final prefs = SettingsSharedPreferences();
+    final now = DateTime.now();
+
+    final firstLaunchAt = await prefs.getFirstLaunchAt();
+    if (firstLaunchAt == null) {
+      // First-ever launch — anchor the clock, don't prompt yet.
+      await prefs.saveFirstLaunchAt(now);
+      return;
+    }
+
+    if (now.difference(firstLaunchAt) < const Duration(days: 3)) return;
+
+    final lastPromptedAt = await prefs.getLastReviewPromptAt();
+    if (lastPromptedAt != null &&
+        now.difference(lastPromptedAt) < const Duration(days: 7)) {
+      return;
+    }
+
+    final inAppReview = InAppReview.instance;
+    if (!await inAppReview.isAvailable()) return;
+
+    await inAppReview.requestReview();
+    await prefs.saveLastReviewPromptAt(now);
   }
 
   Future<List<ZikrCategory>> _loadCategories() async {
