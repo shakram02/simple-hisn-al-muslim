@@ -61,19 +61,15 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
     });
   }
 
-  void _loadZikr() async {
-    final repo = ZikrRepository();
-    repo.loadCategoryZikr(widget.category.id).then((loadedZikr) {
-      zikrCountMap = <int, int>{};
-      for (final zikr in loadedZikr) {
-        zikrCountMap[zikr.id] = 0;
-      }
-
-      setState(() {
-        categoryZikrList = loadedZikr;
-        zikrCountMap = zikrCountMap;
-        isLoading = false;
-      });
+  Future<void> _loadZikr() async {
+    final loadedZikr = await ZikrRepository().loadCategoryZikr(
+      widget.category.id,
+    );
+    if (!mounted) return;
+    setState(() {
+      categoryZikrList = loadedZikr;
+      zikrCountMap = {for (final zikr in loadedZikr) zikr.id: 0};
+      isLoading = false;
     });
   }
 
@@ -85,129 +81,181 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
     super.dispose();
   }
 
+  bool _hasUnsavedProgress() {
+    if (isLoading || categoryZikrList.isEmpty) return false;
+    var hasAnyProgress = false;
+    var allCompleted = true;
+    for (final zikr in categoryZikrList) {
+      final count = zikrCountMap[zikr.id] ?? 0;
+      if (count > 0) hasAnyProgress = true;
+      if (count < zikr.count) allCompleted = false;
+    }
+    return hasAnyProgress && !allCompleted;
+  }
+
+  Future<bool> _confirmExit() async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => Directionality(
+        textDirection: TextDirection.rtl,
+        child: AlertDialog(
+          title: const Text('تأكيد الخروج'),
+          content: const Text('سيتم فقدان تقدمك. هل تريد الخروج؟'),
+          actions: [
+            TextButton(
+              autofocus: true,
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+              child: const Text('إلغاء'),
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Theme.of(dialogContext).colorScheme.error,
+              ),
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+              child: const Text('خروج'),
+            ),
+          ],
+        ),
+      ),
+    );
+    return result ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
       return LoadingScreen(title: widget.category.title);
     }
 
-    return Scaffold(
-      appBar: ZikrAppBar.getAppBar(
-        title: widget.category.title,
-        context: context,
-        onFontSizeChangeButtonPressed: () {
-          showFontSizeDialog(context, fontSize, (newSize) {
-            setState(() {
-              fontSize = newSize;
-              widget.onFontSizeChanged(newSize);
+    return PopScope(
+      canPop: !_hasUnsavedProgress(),
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        final shouldExit = await _confirmExit();
+        if (shouldExit && context.mounted) {
+          Navigator.of(context).pop();
+        }
+      },
+      child: Scaffold(
+        appBar: ZikrAppBar.getAppBar(
+          title: widget.category.title,
+          context: context,
+          onFontSizeChangeButtonPressed: () {
+            showFontSizeDialog(context, fontSize, (newSize) {
+              setState(() {
+                fontSize = newSize;
+                widget.onFontSizeChanged(newSize);
+              });
             });
-          });
-        },
-        onThemeToggle: widget.onThemeToggle,
-      ),
-      body: GestureDetector(
-        onTap: _resetWakelockTimer,
-        child: Directionality(
-          textDirection: TextDirection.rtl,
-          child: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                child: _buildZikrItemProgress(),
-              ),
-              // Azkar content
-              Expanded(
-                child: PageView.builder(
-                  controller: _pageController,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: categoryZikrList.length,
-                  onPageChanged: (index) {
-                    setState(() {
-                      currentIndex = index;
-                    });
-                  },
-                  itemBuilder: (context, index) {
-                    final zikr = categoryZikrList[index];
-                    return ZikrItemCard(
-                      zikr: zikr,
-                      fontSize: fontSize,
-                      currentCount: zikrCountMap[zikr.id] ?? 0,
-                      onCountChanged: (count) => setState(() {
-                        zikrCountMap[zikr.id] = count;
-                      }),
-                      onCompleted: () {
-                        // Auto-navigate to next zikr after a short delay
-                        Future.delayed(const Duration(milliseconds: 150), () {
-                          if (currentIndex >= categoryZikrList.length - 1) {
-                            return;
-                          }
-
-                          _pageController.nextPage(
-                            duration: const Duration(milliseconds: 450),
-                            curve: Curves.easeInOut,
-                          );
-
-                          // Check if the next page is the last zikr in the category
-                          final isNextPageLastZikr =
-                              currentIndex == categoryZikrList.length - 2;
-                          if (isNextPageLastZikr) {
-                            // Show rating dialog after a brief delay
-                            _rateApp();
-                          }
-                        });
-                      },
-                    );
-                  },
+          },
+          onThemeToggle: widget.onThemeToggle,
+        ),
+        body: GestureDetector(
+          onTap: _resetWakelockTimer,
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                  child: _buildZikrItemProgress(),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: currentIndex > 0
-                          ? () {
-                              _pageController.jumpToPage(currentIndex - 1);
+                // Azkar content
+                Expanded(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: categoryZikrList.length,
+                    onPageChanged: (index) {
+                      setState(() {
+                        currentIndex = index;
+                      });
+                    },
+                    itemBuilder: (context, index) {
+                      final zikr = categoryZikrList[index];
+                      return ZikrItemCard(
+                        zikr: zikr,
+                        fontSize: fontSize,
+                        currentCount: zikrCountMap[zikr.id] ?? 0,
+                        onCountChanged: (count) => setState(() {
+                          zikrCountMap[zikr.id] = count;
+                        }),
+                        onCompleted: () {
+                          // Auto-navigate to next zikr after a short delay
+                          Future.delayed(const Duration(milliseconds: 150), () {
+                            if (currentIndex >= categoryZikrList.length - 1) {
+                              return;
                             }
-                          : null,
 
-                      child: Text(
-                        'السابق',
-                        style: TextStyle(
-                          fontSize: Theme.of(
-                            context,
-                          ).textTheme.bodyLarge?.fontSize,
+                            _pageController.nextPage(
+                              duration: const Duration(milliseconds: 450),
+                              curve: Curves.easeInOut,
+                            );
+
+                            // Check if the next page is the last zikr in the category
+                            final isNextPageLastZikr =
+                                currentIndex == categoryZikrList.length - 2;
+                            if (isNextPageLastZikr) {
+                              // Show rating dialog after a brief delay
+                              _rateApp();
+                            }
+                          });
+                        },
+                      );
+                    },
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextButton(
+                        onPressed: currentIndex > 0
+                            ? () {
+                                _pageController.jumpToPage(currentIndex - 1);
+                              }
+                            : null,
+
+                        child: Text(
+                          'السابق',
+                          style: TextStyle(
+                            fontSize: Theme.of(
+                              context,
+                            ).textTheme.bodyLarge?.fontSize,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      '${arabicNumber(currentIndex + 1)} من ${arabicNumber(categoryZikrList.length)}',
-                    ),
-                    TextButton(
-                      onPressed: currentIndex < categoryZikrList.length - 1
-                          ? () {
-                              Future.delayed(
-                                const Duration(milliseconds: 50),
-                                () {
-                                  _pageController.jumpToPage(currentIndex + 1);
-                                },
-                              );
-                            }
-                          : null,
-                      child: Text(
-                        'التالي',
-                        style: TextStyle(
-                          fontSize: Theme.of(
-                            context,
-                          ).textTheme.bodyLarge?.fontSize,
+                      Text(
+                        '${arabicNumber(currentIndex + 1)} من ${arabicNumber(categoryZikrList.length)}',
+                      ),
+                      TextButton(
+                        onPressed: currentIndex < categoryZikrList.length - 1
+                            ? () {
+                                Future.delayed(
+                                  const Duration(milliseconds: 50),
+                                  () {
+                                    _pageController.jumpToPage(
+                                      currentIndex + 1,
+                                    );
+                                  },
+                                );
+                              }
+                            : null,
+                        child: Text(
+                          'التالي',
+                          style: TextStyle(
+                            fontSize: Theme.of(
+                              context,
+                            ).textTheme.bodyLarge?.fontSize,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
