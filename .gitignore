@@ -48,3 +48,6 @@ app.*.map.json
 /android/app/release
 
 /hisn_muslim_en.json
+
+# Flutter DevTools per-project settings
+/devtools_options.yaml
