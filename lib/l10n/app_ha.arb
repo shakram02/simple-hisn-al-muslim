@@ -1,0 +1,78 @@
+{
+  "@@locale": "ha",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Yada alheri",
+  "shareWithUsSubtitle": "Raba tare da aboki",
+
+  "rateApp": "Ƙimanta Azkar",
+  "rateAppSubtitle": "Bar gajeren sharhi",
+
+
+  "previous": "Baya",
+  "next": "Gaba",
+
+  "pageCounter": "{current} daga {total}",
+
+  "done": "An gama ✓",
+
+  "addToFavorites": "Ƙara cikin abubuwan da na fi so",
+  "removeFromFavorites": "Cire daga abubuwan da na fi so",
+
+  "favorites": "Abubuwan da na fi so",
+  "allCategories": "Dukan kashe-kashe",
+
+  "exitConfirmationTitle": "Ka fita daga taron?",
+  "exitConfirmationBody": "Za a rasa abin da ka cim ma. Tabbas kana son fita?",
+
+  "cancel": "Soke",
+  "exit": "Fita",
+  "ok": "Yarda",
+
+  "fontSize": "Girman rubutu",
+  "sampleText": "Rubutun misali",
+
+  "language": "Harshe",
+
+  "shareAppSubject": "Azkar — Adhkar safe da yamma cikin sauƙi",
+  "shareAppBody": "🤲 Azkar — Adhkar safe da yamma cikin sauƙi\n\nWani manhajar kyauta da ke taimaka maka kiyaye adhkar na yau da kullum daga Hisnul Muslim.\n\n✨ Fasaloli:\n• Adhkar safe da yamma\n• Adhkar na barci da farkawa\n• Lissafi ta hanyar taɓawa\n• Yana aiki ba tare da intanet ba\n• Kyauta kwata-kwata, babu tallace-tallace\n\nSauke shi yanzu:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Saitunan",
+  "settingsDisplay": "Nuni",
+  "settingsLanguage": "Harshe",
+  "settingsTheme": "Yanayin duhu",
+
+  "searchHint": "Nemo adhkar",
+  "searchNoResults": "Babu sakamako",
+
+  "audioPlay": "Sauraron karatu",
+  "audioStop": "Tsayar da karatu",
+  "audioDownloadFailed": "An kasa loda sauti. Duba haɗin intanetinka.",
+
+  "onboardingWelcome": "Barka da zuwa Azkar",
+  "onboardingDescription": "Adhkar na yau da kullum daga Hisnul Muslim, da harshenka.",
+  "onboardingPickLanguage": "Zaɓi harshenka",
+  "onboardingTapToCountTitle": "Taɓa don kirgawa",
+  "onboardingTapToCountBody": "Taɓa katin zikiri don ƙara lissafi. Zai matsa zuwa na gaba ta atomatik bayan gama.",
+  "onboardingSwipeTitle": "Yi amfani da maɓallai don tafiya",
+  "onboardingSwipeBody": "Taɓa Baya da Gaba don motsa tsakanin azkar a cikin kashin.",
+  "onboardingContinue": "Ci gaba",
+  "onboardingGetStarted": "Fara",
+
+  "notificationMorningTitle": "Lokacin azkar safe",
+  "notificationMorningBody": "Ɗan lokaci na shiru don fara ranar ka da azkar.",
+  "notificationEveningTitle": "Lokacin azkar yamma",
+  "notificationEveningBody": "Ɗan lokaci na shiru don fara maraicen ka da azkar.",
+  "notificationsScreenTitle": "Tunatarwa",
+  "notificationsScreenIntro": "Tunatarwa shiru don azkar safe da yamma.",
+  "notificationsMorningLabel": "Azkar safe",
+  "notificationsEveningLabel": "Azkar yamma",
+  "notificationsChannelName": "Tunatarwa na Azkar",
+  "notificationsPermissionDenied": "An kashe sanarwar a saitunan na'urarka.",
+  "notificationsPermissionDeniedAction": "Buɗe saitunan",
+  "notificationsBatteryHelperTitle": "Aiko abin dogara",
+  "notificationsBatteryHelperBody": "Bari Azkar ya ci gaba a baya don tunatarwa ta kasance a kan lokaci.",
+  "notificationsBatteryHelperAction": "Yarda da ayyukan baya",
+  "notificationsBatteryHelperOemHint": "A wasu wayoyi (Xiaomi, Huawei, Samsung), duba saitunan ceton batir idan har yanzu tunatarwa ba ta zo ba."
+}

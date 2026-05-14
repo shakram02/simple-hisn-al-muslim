@@ -1,0 +1,78 @@
+{
+  "@@locale": "sw",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Sambaza kheri",
+  "shareWithUsSubtitle": "Shiriki na rafiki",
+
+  "rateApp": "Kadiria Adhkar",
+  "rateAppSubtitle": "Acha hakiki fupi",
+
+
+  "previous": "Iliyotangulia",
+  "next": "Inayofuata",
+
+  "pageCounter": "{current} kati ya {total}",
+
+  "done": "Imekamilika ✓",
+
+  "addToFavorites": "Ongeza kwenye vipendwa",
+  "removeFromFavorites": "Ondoa kwenye vipendwa",
+
+  "favorites": "Vipendwa",
+  "allCategories": "Aina zote",
+
+  "exitConfirmationTitle": "Toka kwenye kipindi?",
+  "exitConfirmationBody": "Maendeleo yako yatapotea. Una uhakika unataka kutoka?",
+
+  "cancel": "Ghairi",
+  "exit": "Toka",
+  "ok": "Sawa",
+
+  "fontSize": "Ukubwa wa herufi",
+  "sampleText": "Maandishi ya mfano",
+
+  "language": "Lugha",
+
+  "shareAppSubject": "Adhkar — Adhkar za asubuhi na jioni kwa urahisi",
+  "shareAppBody": "🤲 Adhkar — Adhkar za asubuhi na jioni kwa urahisi\n\nProgramu ya bure inayokusaidia kuendelea na adhkar zako za kila siku kutoka Hisnul Muslim.\n\n✨ Vipengele:\n• Adhkar za asubuhi na jioni\n• Adhkar za kulala na kuamka\n• Hesabu kwa kugusa\n• Inafanya kazi bila intaneti\n• Bure kabisa, bila matangazo\n\nPakua sasa:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Mipangilio",
+  "settingsDisplay": "Onyesho",
+  "settingsLanguage": "Lugha",
+  "settingsTheme": "Hali ya giza",
+
+  "searchHint": "Tafuta adhkar",
+  "searchNoResults": "Hakuna matokeo",
+
+  "audioPlay": "Cheza kisomo",
+  "audioStop": "Simamisha kisomo",
+  "audioDownloadFailed": "Imeshindwa kupakia sauti. Angalia muunganisho wako.",
+
+  "onboardingWelcome": "Karibu kwenye Adhkar",
+  "onboardingDescription": "Adhkar za kila siku kutoka Hisnul Muslim, kwa lugha yako.",
+  "onboardingPickLanguage": "Chagua lugha yako",
+  "onboardingTapToCountTitle": "Gusa kuhesabu",
+  "onboardingTapToCountBody": "Gusa kadi ya dhikr ili kuongeza kihesabu. Itahamia kwa dhikr inayofuata moja kwa moja ikikamilika.",
+  "onboardingSwipeTitle": "Tumia vitufe kupita",
+  "onboardingSwipeBody": "Gusa Iliyotangulia na Inayofuata ili kuhama kati ya adhkar katika kundi.",
+  "onboardingContinue": "Endelea",
+  "onboardingGetStarted": "Anza",
+
+  "notificationMorningTitle": "Muda wa adhkar za asubuhi",
+  "notificationMorningBody": "Dakika chache za kuanza siku yako kwa adhkar.",
+  "notificationEveningTitle": "Muda wa adhkar za jioni",
+  "notificationEveningBody": "Dakika chache za kuanza jioni yako kwa adhkar.",
+  "notificationsScreenTitle": "Vikumbusho",
+  "notificationsScreenIntro": "Vikumbusho vya kimya kwa adhkar za asubuhi na jioni.",
+  "notificationsMorningLabel": "Adhkar za asubuhi",
+  "notificationsEveningLabel": "Adhkar za jioni",
+  "notificationsChannelName": "Vikumbusho vya Adhkar",
+  "notificationsPermissionDenied": "Arifa zimezimwa katika mipangilio ya kifaa chako.",
+  "notificationsPermissionDeniedAction": "Fungua mipangilio",
+  "notificationsBatteryHelperTitle": "Utoaji wa kuaminika",
+  "notificationsBatteryHelperBody": "Ruhusu Azkar kuendesha chinichini ili vikumbusho vifike kwa wakati.",
+  "notificationsBatteryHelperAction": "Ruhusu shughuli za chinichini",
+  "notificationsBatteryHelperOemHint": "Kwenye simu fulani (Xiaomi, Huawei, Samsung), angalia mipangilio ya kuhifadhi betri ikiwa vikumbusho bado havifiki."
+}

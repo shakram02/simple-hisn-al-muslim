@@ -1,4 +1,3 @@
-import 'package:azkar/constants.dart';
 import 'package:azkar/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -11,6 +10,5 @@ void main() {
     await tester.pumpWidget(const ZikrApp());
 
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
-    expect(find.text(Constants.appName), findsOneWidget);
   });
 }

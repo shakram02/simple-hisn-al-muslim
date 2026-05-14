@@ -1,0 +1,92 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Hisnul Muslim",
+  "@appTitle": { "description": "App display title in the AppBar and launcher" },
+
+  "shareWithUs": "Spread the good",
+  "@shareWithUs": { "description": "Share-app button on the categories screen. Phrased to convey that sharing IS the good deed (per the hadith الدال على الخير كفاعله) — not 'give away your reward'." },
+
+  "shareWithUsSubtitle": "Share with a friend",
+  "@shareWithUsSubtitle": { "description": "Secondary text under the Share CTA on the main screen." },
+
+  "rateApp": "Rate Hisnul Muslim",
+  "@rateApp": { "description": "Rate-the-app CTA on the main screen; opens the Play Store listing." },
+
+  "rateAppSubtitle": "Leave a quick review",
+  "@rateAppSubtitle": { "description": "Secondary text under the Rate CTA on the main screen." },
+
+  "previous": "Previous",
+  "next": "Next",
+
+  "pageCounter": "{current} of {total}",
+  "@pageCounter": {
+    "description": "Bottom-of-screen page counter on the zikr detail screen",
+    "placeholders": {
+      "current": { "type": "String" },
+      "total":   { "type": "String" }
+    }
+  },
+
+  "done": "Done ✓",
+  "@done": { "description": "Marker shown when a zikr's repeat count is reached" },
+
+  "addToFavorites": "Add to favorites",
+  "removeFromFavorites": "Remove from favorites",
+
+  "favorites": "Favorites",
+  "allCategories": "All categories",
+
+  "exitConfirmationTitle": "Leave session?",
+  "exitConfirmationBody": "Your progress will be lost. Are you sure you want to exit?",
+
+  "cancel": "Cancel",
+  "exit": "Exit",
+  "ok": "OK",
+
+  "fontSize": "Font size",
+  "sampleText": "Sample text",
+
+  "language": "Language",
+
+  "shareAppSubject": "Hisnul Muslim — Easy morning & evening azkar",
+  "shareAppBody": "🤲 Hisnul Muslim — Easy morning & evening azkar\n\nA free app that helps you keep up with daily azkar from Hisnul Muslim.\n\n✨ Features:\n• Morning & evening azkar\n• Sleeping & waking azkar\n• Tap-to-count\n• Works offline\n• Completely free, no ads\n\nDownload now:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Settings",
+  "settingsDisplay": "Display",
+  "settingsLanguage": "Language",
+  "settingsTheme": "Dark mode",
+
+  "searchHint": "Search azkar",
+  "searchNoResults": "No matching azkar",
+
+  "audioPlay": "Play recitation",
+  "audioStop": "Stop recitation",
+  "audioDownloadFailed": "Couldn't load audio. Check your connection.",
+
+  "onboardingWelcome": "Welcome to Hisnul Muslim",
+  "onboardingDescription": "Daily azkar from Hisnul Muslim, in your language.",
+  "onboardingPickLanguage": "Pick your language",
+  "onboardingTapToCountTitle": "Tap to count",
+  "onboardingTapToCountBody": "Tap the zikr card to advance the counter. It auto-moves to the next one when complete.",
+  "onboardingSwipeTitle": "Use the buttons to navigate",
+  "onboardingSwipeBody": "Tap Previous and Next to move between zikrs in a category.",
+  "onboardingContinue": "Continue",
+  "onboardingGetStarted": "Get started",
+
+  "notificationMorningTitle": "Time for morning azkar",
+  "notificationMorningBody": "A quiet moment to begin your day with azkar.",
+  "notificationEveningTitle": "Time for evening azkar",
+  "notificationEveningBody": "A quiet moment to begin your evening with azkar.",
+  "notificationsScreenTitle": "Notifications",
+  "notificationsScreenIntro": "Quiet daily reminders for morning and evening azkar.",
+  "notificationsMorningLabel": "Morning azkar",
+  "notificationsEveningLabel": "Evening azkar",
+  "notificationsChannelName": "Azkar reminders",
+  "notificationsPermissionDenied": "Notifications are disabled in your device settings.",
+  "notificationsPermissionDeniedAction": "Open settings",
+  "notificationsBatteryHelperTitle": "Reliable delivery",
+  "notificationsBatteryHelperBody": "Let Hisnul Muslim run in the background so reminders fire on time.",
+  "notificationsBatteryHelperAction": "Allow background activity",
+  "notificationsBatteryHelperOemHint": "On some phones (Xiaomi, Huawei, Samsung), check your battery-saver settings if reminders still miss."
+}

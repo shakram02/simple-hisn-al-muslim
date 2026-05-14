@@ -1,0 +1,78 @@
+{
+  "@@locale": "so",
+
+  "appTitle": "Xisnul Muslim",
+
+  "shareWithUs": "Faafi khayrka",
+  "shareWithUsSubtitle": "La wadaag saaxiib",
+
+  "rateApp": "Qiimee Azkar",
+  "rateAppSubtitle": "Reeb dib-u-eegis gaaban",
+
+
+  "previous": "Hore",
+  "next": "Xiga",
+
+  "pageCounter": "{current} ka mid ah {total}",
+
+  "done": "Waa dhammaaday ✓",
+
+  "addToFavorites": "Ku dar kuwa la jecel yahay",
+  "removeFromFavorites": "Ka saar kuwa la jecel yahay",
+
+  "favorites": "Kuwa la jecel yahay",
+  "allCategories": "Dhammaan qaybaha",
+
+  "exitConfirmationTitle": "Ma ka baxaysaa kalfadhiga?",
+  "exitConfirmationBody": "Horumarkaagu wuu lumayaa. Ma hubtaa inaad rabto inaad ka baxdo?",
+
+  "cancel": "Jooji",
+  "exit": "Bax",
+  "ok": "Hagaag",
+
+  "fontSize": "Cabbirka qoraalka",
+  "sampleText": "Tusaale qoraal",
+
+  "language": "Luuqada",
+
+  "shareAppSubject": "Azkar — Adhkaarta subaxa iyo galabta si fudud",
+  "shareAppBody": "🤲 Azkar — Adhkaarta subaxa iyo galabta si fudud\n\nApp bilaash ah oo ku caawinaysa inaad sii waddo adhkaartaada maalinlaha ah ee Xisnul Muslim.\n\n✨ Astaamaha:\n• Adhkaarta subaxa iyo galabta\n• Adhkaarta hurdada iyo soo jeeda\n• Tirin shukulul ah\n• Wuxuu shaqeeyaa adigoo aan internet ku jirin\n• Bilaash kkamil ah, xayaysiis la'aan\n\nSoo deji hadda:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Habdhiska",
+  "settingsDisplay": "Muuqaalka",
+  "settingsLanguage": "Luuqada",
+  "settingsTheme": "Habka mugdiga ah",
+
+  "searchHint": "Raadi adhkaar",
+  "searchNoResults": "Wax natiijo ah ma jiraan",
+
+  "audioPlay": "Soo dhig akhriska",
+  "audioStop": "Jooji akhriska",
+  "audioDownloadFailed": "Lama soo bandhigi karo codka. Hubi xiriirkaaga.",
+
+  "onboardingWelcome": "Ku soo dhowoow Azkar",
+  "onboardingDescription": "Adhkaarta maalinlaha ah ee Xisnul Muslim, luuqaddaada.",
+  "onboardingPickLanguage": "Dooro luuqaddaada",
+  "onboardingTapToCountTitle": "Taabo si aad u tiriso",
+  "onboardingTapToCountBody": "Taabo kaadhka dhikrka si aad u kordhiso tirinta. Si toos ah ayey ugu wareegtaa kan xiga marka la dhammeeyo.",
+  "onboardingSwipeTitle": "Isticmaal badhamada si aad u dhex marto",
+  "onboardingSwipeBody": "Taabo Hore iyo Xiga si aad u dhex marto adhkaarta qaybta.",
+  "onboardingContinue": "Sii wad",
+  "onboardingGetStarted": "Bilow",
+
+  "notificationMorningTitle": "Waa wakhtigii adhkaarta subaxa",
+  "notificationMorningBody": "Daqiiqado yar oo aad maalintaada ku bilowdo adhkaarta.",
+  "notificationEveningTitle": "Waa wakhtigii adhkaarta galabta",
+  "notificationEveningBody": "Daqiiqado yar oo aad galabtaada ku bilowdo adhkaarta.",
+  "notificationsScreenTitle": "Xasuusinta",
+  "notificationsScreenIntro": "Xasuusin aamusan oo adhkaarta subaxa iyo galabta.",
+  "notificationsMorningLabel": "Adhkaarta subaxa",
+  "notificationsEveningLabel": "Adhkaarta galabta",
+  "notificationsChannelName": "Xasuusinta Adhkaarta",
+  "notificationsPermissionDenied": "Ogeysiisyada waxaa laga damiyay dejinta aaladdaada.",
+  "notificationsPermissionDeniedAction": "Fur dejinta",
+  "notificationsBatteryHelperTitle": "Soo gaarsiin lagu kalsoon yahay",
+  "notificationsBatteryHelperBody": "U ogolow Azkar inay ka shaqayso gadaal si xasuusinta ay waqtigeeda u soo gaarto.",
+  "notificationsBatteryHelperAction": "U ogolow shaqada gadaasha",
+  "notificationsBatteryHelperOemHint": "Qaar ka mid ah taleefannada (Xiaomi, Huawei, Samsung), eeg dejinta keydinta batariga haddii xasuusinta weli aysan iman."
+}

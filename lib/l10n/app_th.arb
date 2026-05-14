@@ -1,0 +1,78 @@
+{
+  "@@locale": "th",
+
+  "appTitle": "ฮิสนุล มุสลิม",
+
+  "shareWithUs": "ส่งต่อความดี",
+  "shareWithUsSubtitle": "แชร์กับเพื่อน",
+
+  "rateApp": "ให้คะแนนอัซการ์",
+  "rateAppSubtitle": "เขียนรีวิวสั้น ๆ",
+
+
+  "previous": "ก่อนหน้า",
+  "next": "ถัดไป",
+
+  "pageCounter": "{current} จาก {total}",
+
+  "done": "เสร็จแล้ว ✓",
+
+  "addToFavorites": "เพิ่มในรายการโปรด",
+  "removeFromFavorites": "ลบจากรายการโปรด",
+
+  "favorites": "รายการโปรด",
+  "allCategories": "ทุกหมวดหมู่",
+
+  "exitConfirmationTitle": "ออกจากการอ่านหรือไม่?",
+  "exitConfirmationBody": "ความคืบหน้าของคุณจะหายไป คุณแน่ใจหรือไม่?",
+
+  "cancel": "ยกเลิก",
+  "exit": "ออก",
+  "ok": "ตกลง",
+
+  "fontSize": "ขนาดตัวอักษร",
+  "sampleText": "ข้อความตัวอย่าง",
+
+  "language": "ภาษา",
+
+  "shareAppSubject": "อัซการ์ — อัซการ์เช้า-เย็นที่ใช้งานง่าย",
+  "shareAppBody": "🤲 อัซการ์ — อัซการ์เช้า-เย็นที่ใช้งานง่าย\n\nแอปฟรีที่ช่วยให้คุณรักษาการอ่านอัซการ์ประจำวันจากหนังสือฮิศนุลมุสลิม\n\n✨ คุณสมบัติ:\n• อัซการ์เช้าและเย็น\n• อัซการ์ก่อนนอนและตื่นนอน\n• แตะเพื่อ้นับ\n• ใช้งานแบบออฟไลน์ได้\n• ฟรีโดยสมบูรณ์ ไม่มีโฆษณา\n\nดาวน์โหลดเลย:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "การตั้งค่า",
+  "settingsDisplay": "การแสดงผล",
+  "settingsLanguage": "ภาษา",
+  "settingsTheme": "โหมดมืด",
+
+  "searchHint": "ค้นหาอัซการ์",
+  "searchNoResults": "ไม่พบผลลัพธ์",
+
+  "audioPlay": "เล่นเสียงอ่าน",
+  "audioStop": "หยุดเสียงอ่าน",
+  "audioDownloadFailed": "ไม่สามารถโหลดเสียงได้ ตรวจสอบการเชื่อมต่อของคุณ",
+
+  "onboardingWelcome": "ยินดีต้อนรับสู่อัซการ์",
+  "onboardingDescription": "อัซการ์ประจำวันจากฮิศนุลมุสลิม ในภาษาของคุณ",
+  "onboardingPickLanguage": "เลือกภาษาของคุณ",
+  "onboardingTapToCountTitle": "แตะเพื่อนับ",
+  "onboardingTapToCountBody": "แตะการ์ดซิกร์เพื่อเพิ่มตัวนับ จะเลื่อนไปยังซิกร์ถัดไปโดยอัตโนมัติเมื่อครบ",
+  "onboardingSwipeTitle": "ใช้ปุ่มเพื่อเลื่อนดู",
+  "onboardingSwipeBody": "แตะ ก่อนหน้า และ ถัดไป เพื่อเปลี่ยนระหว่างซิกร์ในหมวดหมู่",
+  "onboardingContinue": "ต่อไป",
+  "onboardingGetStarted": "เริ่มต้น",
+
+  "notificationMorningTitle": "ถึงเวลาอัซการ์เช้า",
+  "notificationMorningBody": "ช่วงเวลาเงียบสงบเพื่อเริ่มต้นวันด้วยอัซการ์",
+  "notificationEveningTitle": "ถึงเวลาอัซการ์เย็น",
+  "notificationEveningBody": "ช่วงเวลาเงียบสงบเพื่อเริ่มต้นค่ำคืนด้วยอัซการ์",
+  "notificationsScreenTitle": "การแจ้งเตือน",
+  "notificationsScreenIntro": "การแจ้งเตือนที่เงียบสำหรับอัซการ์เช้าและเย็น",
+  "notificationsMorningLabel": "อัซการ์เช้า",
+  "notificationsEveningLabel": "อัซการ์เย็น",
+  "notificationsChannelName": "การแจ้งเตือนอัซการ์",
+  "notificationsPermissionDenied": "การแจ้งเตือนถูกปิดอยู่ในการตั้งค่าอุปกรณ์ของคุณ",
+  "notificationsPermissionDeniedAction": "เปิดการตั้งค่า",
+  "notificationsBatteryHelperTitle": "การส่งที่เชื่อถือได้",
+  "notificationsBatteryHelperBody": "อนุญาตให้ Azkar ทำงานเบื้องหลังเพื่อให้การแจ้งเตือนมาตรงเวลา",
+  "notificationsBatteryHelperAction": "อนุญาตกิจกรรมเบื้องหลัง",
+  "notificationsBatteryHelperOemHint": "บางรุ่น (Xiaomi, Huawei, Samsung) ให้ตรวจสอบการตั้งค่าประหยัดแบตเตอรี่หากการแจ้งเตือนยังขาดหาย"
+}

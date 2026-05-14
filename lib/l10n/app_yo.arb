@@ -1,0 +1,78 @@
+{
+  "@@locale": "yo",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Tan ire ka",
+  "shareWithUsSubtitle": "Pín pẹlu ọ̀rẹ́",
+
+  "rateApp": "Fún Azkar ní iye",
+  "rateAppSubtitle": "Fi àtúnyẹ̀wò kúkurú sílẹ̀",
+
+
+  "previous": "Iṣaaju",
+  "next": "Tókàn",
+
+  "pageCounter": "{current} nínú {total}",
+
+  "done": "Ó ti parí ✓",
+
+  "addToFavorites": "Fi kún ohun ayanfẹ́",
+  "removeFromFavorites": "Yọ kúrò nínú ohun ayanfẹ́",
+
+  "favorites": "Ohun ayanfẹ́",
+  "allCategories": "Gbogbo ìpín",
+
+  "exitConfirmationTitle": "Jáde kúrò nínú ìpàdé?",
+  "exitConfirmationBody": "Ìlọsíwájú rẹ yóò sọnù. Ṣé o dájú pé o fẹ́ jáde?",
+
+  "cancel": "Fagilee",
+  "exit": "Jáde",
+  "ok": "Ó dáa",
+
+  "fontSize": "Ìwọn lẹ́tà",
+  "sampleText": "Àpẹẹrẹ ọ̀rọ̀",
+
+  "language": "Èdè",
+
+  "shareAppSubject": "Azkar — Adhkar àárọ̀ àti alẹ́ ní irọrùn",
+  "shareAppBody": "🤲 Azkar — Adhkar àárọ̀ àti alẹ́ ní irọrùn\n\nApp ọ̀fẹ́ tó ń ràn ọ́ lọ́wọ́ láti pa adhkar ojoojúmọ́ rẹ mọ́ láti inú Hisnul Muslim.\n\n✨ Àwọn ẹ̀yà:\n• Adhkar àárọ̀ àti alẹ́\n• Adhkar ìsùn àti jíjì\n• Ìka-iye pẹ̀lú ìfọwọ́kàn\n• Ó ń ṣiṣẹ́ láìsí ayélujára\n• Ọ̀fẹ́ pátápátá, kò sí ìpolówó\n\nGba lulẹ̀ báyìí:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Ètò",
+  "settingsDisplay": "Ìfihàn",
+  "settingsLanguage": "Èdè",
+  "settingsTheme": "Ìpò òkùnkùn",
+
+  "searchHint": "Wá adhkar",
+  "searchNoResults": "Kò sí ìpinnu",
+
+  "audioPlay": "Tan kíkà sí",
+  "audioStop": "Dá kíkà dúró",
+  "audioDownloadFailed": "Kò ṣee ṣe láti gbé ohùn náà. Ṣàyẹ̀wò ìjápọ̀ rẹ.",
+
+  "onboardingWelcome": "Káàbọ̀ sí Azkar",
+  "onboardingDescription": "Adhkar ojoojúmọ́ láti inú Hisnul Muslim, ní èdè rẹ.",
+  "onboardingPickLanguage": "Yan èdè rẹ",
+  "onboardingTapToCountTitle": "Fọwọ́ kàn láti ka",
+  "onboardingTapToCountBody": "Fọwọ́ kan káàdì zikr láti mú ìka-iye sókè. Yóò gbé lọ sí ọ̀kan tó kàn ní àìfọwọ́kàn nígbà tó bá pé.",
+  "onboardingSwipeTitle": "Lo àwọn bọ́tìnì láti rìn káàkiri",
+  "onboardingSwipeBody": "Fọwọ́ kan Iṣaaju àti Tókàn láti yí padà láàrin adhkar nínú ìpín kan.",
+  "onboardingContinue": "Tẹsiwaju",
+  "onboardingGetStarted": "Bẹ̀rẹ̀",
+
+  "notificationMorningTitle": "Akoko fun adhkar owurọ",
+  "notificationMorningBody": "Akoko idakẹjẹ lati bẹrẹ ọjọ rẹ pẹlu adhkar.",
+  "notificationEveningTitle": "Akoko fun adhkar irọlẹ",
+  "notificationEveningBody": "Akoko idakẹjẹ lati bẹrẹ irọlẹ rẹ pẹlu adhkar.",
+  "notificationsScreenTitle": "Iranti",
+  "notificationsScreenIntro": "Awọn iranti aladun fun adhkar owurọ ati irọlẹ.",
+  "notificationsMorningLabel": "Adhkar owurọ",
+  "notificationsEveningLabel": "Adhkar irọlẹ",
+  "notificationsChannelName": "Iranti Adhkar",
+  "notificationsPermissionDenied": "A ti pa awọn ifitonileti ninu eto ẹrọ rẹ.",
+  "notificationsPermissionDeniedAction": "Ṣii eto",
+  "notificationsBatteryHelperTitle": "Ifijiṣẹ tó gbẹkẹlé",
+  "notificationsBatteryHelperBody": "Jẹ́ kí Azkar ṣiṣẹ́ ní ẹhin ki awọn iranti baà dé ni akoko.",
+  "notificationsBatteryHelperAction": "Faye gba iṣẹ ẹhin",
+  "notificationsBatteryHelperOemHint": "Ní àwọn fóònù kan (Xiaomi, Huawei, Samsung), ṣàyẹ̀wò ètò fifipamọ́ batiri tó bá jẹ́ pé awọn iranti ko dé."
+}

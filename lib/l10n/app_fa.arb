@@ -1,0 +1,78 @@
+{
+  "@@locale": "fa",
+
+  "appTitle": "حصن المسلم",
+
+  "shareWithUs": "خیر را گسترش دهید",
+  "shareWithUsSubtitle": "با یک دوست به اشتراک بگذارید",
+
+  "rateApp": "به اذکار امتیاز دهید",
+  "rateAppSubtitle": "نظر کوتاهی بنویسید",
+
+
+  "previous": "قبلی",
+  "next": "بعدی",
+
+  "pageCounter": "{current} از {total}",
+
+  "done": "انجام شد ✓",
+
+  "addToFavorites": "افزودن به علاقه‌مندی‌ها",
+  "removeFromFavorites": "حذف از علاقه‌مندی‌ها",
+
+  "favorites": "علاقه‌مندی‌ها",
+  "allCategories": "همهٔ دسته‌ها",
+
+  "exitConfirmationTitle": "از این بخش خارج می‌شوید؟",
+  "exitConfirmationBody": "پیشرفت شما از دست خواهد رفت. آیا مطمئن هستید؟",
+
+  "cancel": "انصراف",
+  "exit": "خروج",
+  "ok": "تأیید",
+
+  "fontSize": "اندازهٔ متن",
+  "sampleText": "نمونهٔ متن",
+
+  "language": "زبان",
+
+  "shareAppSubject": "اذکار — اذکار صبح و شام به‌سادگی",
+  "shareAppBody": "🤲 اذکار — اذکار صبح و شام به‌سادگی\n\nبرنامه‌ای رایگان که در پایبندی به اذکار روزانه از کتاب حصن المسلم به شما کمک می‌کند.\n\n✨ ویژگی‌ها:\n• اذکار صبح و شام\n• اذکار خواب و بیداری\n• شمارش با یک لمس\n• کار بدون اینترنت\n• کاملاً رایگان و بدون تبلیغات\n\nهمین حالا دانلود کنید:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "تنظیمات",
+  "settingsDisplay": "نمایش",
+  "settingsLanguage": "زبان",
+  "settingsTheme": "حالت تیره",
+
+  "searchHint": "جست‌وجوی اذکار",
+  "searchNoResults": "نتیجه‌ای یافت نشد",
+
+  "audioPlay": "پخش تلاوت",
+  "audioStop": "توقف تلاوت",
+  "audioDownloadFailed": "بارگذاری صدا ممکن نشد. اتصال خود را بررسی کنید.",
+
+  "onboardingWelcome": "به اذکار خوش آمدید",
+  "onboardingDescription": "اذکار روزانه از حصن المسلم، به زبان شما.",
+  "onboardingPickLanguage": "زبان خود را انتخاب کنید",
+  "onboardingTapToCountTitle": "برای شمارش لمس کنید",
+  "onboardingTapToCountBody": "روی کارت ذکر بزنید تا شمارنده پیش برود. در پایان به‌طور خودکار به ذکر بعدی می‌رود.",
+  "onboardingSwipeTitle": "از دکمه‌ها برای پیمایش استفاده کنید",
+  "onboardingSwipeBody": "روی قبلی و بعدی بزنید تا میان اذکار یک دسته جابه‌جا شوید.",
+  "onboardingContinue": "ادامه",
+  "onboardingGetStarted": "شروع",
+
+  "notificationMorningTitle": "وقت اذکار صبح است",
+  "notificationMorningBody": "لحظه‌ای آرام برای آغاز روز با اذکار.",
+  "notificationEveningTitle": "وقت اذکار شام است",
+  "notificationEveningBody": "لحظه‌ای آرام برای آغاز شام با اذکار.",
+  "notificationsScreenTitle": "یادآورها",
+  "notificationsScreenIntro": "یادآورهای آرام برای اذکار صبح و شام.",
+  "notificationsMorningLabel": "اذکار صبح",
+  "notificationsEveningLabel": "اذکار شام",
+  "notificationsChannelName": "یادآورهای اذکار",
+  "notificationsPermissionDenied": "اعلان‌ها در تنظیمات دستگاه شما غیرفعال هستند.",
+  "notificationsPermissionDeniedAction": "باز کردن تنظیمات",
+  "notificationsBatteryHelperTitle": "تحویل مطمئن",
+  "notificationsBatteryHelperBody": "به اذکار اجازه دهید در پس‌زمینه اجرا شود تا یادآورها به موقع برسند.",
+  "notificationsBatteryHelperAction": "اجازهٔ فعالیت در پس‌زمینه",
+  "notificationsBatteryHelperOemHint": "در بعضی گوشی‌ها (شیائومی، هوآوی، سامسونگ) اگر یادآورها نرسیدند تنظیمات صرفه‌جویی باتری را بررسی کنید."
+}

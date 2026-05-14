@@ -1,0 +1,78 @@
+{
+  "@@locale": "bs",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Širite dobro",
+  "shareWithUsSubtitle": "Podijelite s prijateljem",
+
+  "rateApp": "Ocijenite Zikrove",
+  "rateAppSubtitle": "Ostavite kratku recenziju",
+
+
+  "previous": "Prethodno",
+  "next": "Sljedeće",
+
+  "pageCounter": "{current} od {total}",
+
+  "done": "Gotovo ✓",
+
+  "addToFavorites": "Dodaj u omiljeno",
+  "removeFromFavorites": "Ukloni iz omiljenog",
+
+  "favorites": "Omiljeno",
+  "allCategories": "Sve kategorije",
+
+  "exitConfirmationTitle": "Napustiti učenje?",
+  "exitConfirmationBody": "Vaš napredak će biti izgubljen. Jeste li sigurni da želite izaći?",
+
+  "cancel": "Otkaži",
+  "exit": "Izađi",
+  "ok": "U redu",
+
+  "fontSize": "Veličina fonta",
+  "sampleText": "Primjer teksta",
+
+  "language": "Jezik",
+
+  "shareAppSubject": "Zikrovi — Jutarnji i večernji zikrovi jednostavno",
+  "shareAppBody": "🤲 Zikrovi — Jutarnji i večernji zikrovi jednostavno\n\nBesplatna aplikacija koja vam pomaže da redovno učite svakodnevne zikrove iz Hisnul Muslima.\n\n✨ Mogućnosti:\n• Jutarnji i večernji zikrovi\n• Zikrovi pri lijeganju i ustajanju\n• Brojanje dodirom\n• Radi i bez interneta\n• Potpuno besplatno, bez reklama\n\nPreuzmite sada:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Postavke",
+  "settingsDisplay": "Prikaz",
+  "settingsLanguage": "Jezik",
+  "settingsTheme": "Tamni način",
+
+  "searchHint": "Pretražite zikrove",
+  "searchNoResults": "Nema rezultata",
+
+  "audioPlay": "Pusti učenje",
+  "audioStop": "Zaustavi učenje",
+  "audioDownloadFailed": "Nije moguće učitati audio. Provjerite vezu.",
+
+  "onboardingWelcome": "Dobrodošli u Zikrove",
+  "onboardingDescription": "Svakodnevni zikrovi iz Hisnul Muslima, na vašem jeziku.",
+  "onboardingPickLanguage": "Odaberite svoj jezik",
+  "onboardingTapToCountTitle": "Dodirnite za brojanje",
+  "onboardingTapToCountBody": "Dodirnite karticu zikra da povećate brojač. Po završetku se automatski prebacuje na sljedeći zikr.",
+  "onboardingSwipeTitle": "Koristite dugmad za kretanje",
+  "onboardingSwipeBody": "Dodirnite Prethodno i Sljedeće za kretanje među zikrovima u kategoriji.",
+  "onboardingContinue": "Nastavi",
+  "onboardingGetStarted": "Započni",
+
+  "notificationMorningTitle": "Vrijeme je za jutarnje zikrove",
+  "notificationMorningBody": "Kratak trenutak da započneš dan zikrom.",
+  "notificationEveningTitle": "Vrijeme je za večernje zikrove",
+  "notificationEveningBody": "Kratak trenutak da započneš veče zikrom.",
+  "notificationsScreenTitle": "Podsjetnici",
+  "notificationsScreenIntro": "Tihi dnevni podsjetnici za jutarnje i večernje zikrove.",
+  "notificationsMorningLabel": "Jutarnji zikrovi",
+  "notificationsEveningLabel": "Večernji zikrovi",
+  "notificationsChannelName": "Podsjetnici za zikrove",
+  "notificationsPermissionDenied": "Obavještenja su isključena u postavkama uređaja.",
+  "notificationsPermissionDeniedAction": "Otvori postavke",
+  "notificationsBatteryHelperTitle": "Pouzdana isporuka",
+  "notificationsBatteryHelperBody": "Dozvolite Azkaru da radi u pozadini kako bi podsjetnici stizali na vrijeme.",
+  "notificationsBatteryHelperAction": "Dozvoli pozadinsku aktivnost",
+  "notificationsBatteryHelperOemHint": "Na nekim telefonima (Xiaomi, Huawei, Samsung), provjerite postavke uštede baterije ako podsjetnici i dalje ne stižu."
+}

@@ -1,0 +1,78 @@
+{
+  "@@locale": "bn",
+
+  "appTitle": "হিসনুল মুসলিম",
+
+  "shareWithUs": "কল্যাণ ছড়িয়ে দিন",
+  "shareWithUsSubtitle": "বন্ধুর সাথে শেয়ার করুন",
+
+  "rateApp": "আযকার রেট করুন",
+  "rateAppSubtitle": "সংক্ষিপ্ত রিভিউ দিন",
+
+
+  "previous": "পূর্ববর্তী",
+  "next": "পরবর্তী",
+
+  "pageCounter": "{total} এর মধ্যে {current}",
+
+  "done": "সম্পন্ন ✓",
+
+  "addToFavorites": "প্রিয় তালিকায় যোগ করুন",
+  "removeFromFavorites": "প্রিয় তালিকা থেকে সরান",
+
+  "favorites": "প্রিয়",
+  "allCategories": "সব শ্রেণি",
+
+  "exitConfirmationTitle": "এই সেশন থেকে বের হবেন?",
+  "exitConfirmationBody": "আপনার অগ্রগতি হারিয়ে যাবে। আপনি কি নিশ্চিত?",
+
+  "cancel": "বাতিল",
+  "exit": "প্রস্থান",
+  "ok": "ঠিক আছে",
+
+  "fontSize": "ফন্টের আকার",
+  "sampleText": "নমুনা লেখা",
+
+  "language": "ভাষা",
+
+  "shareAppSubject": "আযকার — সকাল ও সন্ধ্যার সহজ আযকার",
+  "shareAppBody": "🤲 আযকার — সকাল ও সন্ধ্যার সহজ আযকার\n\nএকটি ফ্রি অ্যাপ যা হিসনুল মুসলিম থেকে প্রতিদিনের আযকার পড়তে সাহায্য করে।\n\n✨ বৈশিষ্ট্য:\n• সকাল ও সন্ধ্যার আযকার\n• ঘুম ও জাগরণের আযকার\n• ট্যাপ করে গণনা\n• অফলাইনে কাজ করে\n• সম্পূর্ণ ফ্রি, কোনো বিজ্ঞাপন নেই\n\nএখনই ডাউনলোড করুন:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "সেটিংস",
+  "settingsDisplay": "ডিসপ্লে",
+  "settingsLanguage": "ভাষা",
+  "settingsTheme": "ডার্ক মোড",
+
+  "searchHint": "আযকার খুঁজুন",
+  "searchNoResults": "কোনো ফলাফল নেই",
+
+  "audioPlay": "তিলাওয়াত চালু করুন",
+  "audioStop": "তিলাওয়াত বন্ধ করুন",
+  "audioDownloadFailed": "অডিও লোড করা যায়নি। আপনার সংযোগ যাচাই করুন।",
+
+  "onboardingWelcome": "আযকারে স্বাগতম",
+  "onboardingDescription": "হিসনুল মুসলিম থেকে প্রতিদিনের আযকার, আপনার ভাষায়।",
+  "onboardingPickLanguage": "আপনার ভাষা বেছে নিন",
+  "onboardingTapToCountTitle": "গণনা করতে ট্যাপ করুন",
+  "onboardingTapToCountBody": "জিকর কার্ডে ট্যাপ করে কাউন্টার বাড়ান। সম্পন্ন হলে স্বয়ংক্রিয়ভাবে পরবর্তীটিতে চলে যাবে।",
+  "onboardingSwipeTitle": "চলাচলের জন্য বোতাম ব্যবহার করুন",
+  "onboardingSwipeBody": "একই শ্রেণির জিকরগুলোর মধ্যে যেতে পূর্ববর্তী ও পরবর্তী চাপুন।",
+  "onboardingContinue": "চালিয়ে যান",
+  "onboardingGetStarted": "শুরু করুন",
+
+  "notificationMorningTitle": "সকালের আযকারের সময়",
+  "notificationMorningBody": "আযকার দিয়ে আপনার দিন শুরু করার জন্য কিছু সময়।",
+  "notificationEveningTitle": "সন্ধ্যার আযকারের সময়",
+  "notificationEveningBody": "আযকার দিয়ে আপনার সন্ধ্যা শুরু করার জন্য কিছু সময়।",
+  "notificationsScreenTitle": "রিমাইন্ডার",
+  "notificationsScreenIntro": "সকাল ও সন্ধ্যার আযকারের জন্য শান্ত রিমাইন্ডার।",
+  "notificationsMorningLabel": "সকালের আযকার",
+  "notificationsEveningLabel": "সন্ধ্যার আযকার",
+  "notificationsChannelName": "আযকার রিমাইন্ডার",
+  "notificationsPermissionDenied": "আপনার ডিভাইস সেটিংসে নোটিফিকেশন বন্ধ আছে।",
+  "notificationsPermissionDeniedAction": "সেটিংস খুলুন",
+  "notificationsBatteryHelperTitle": "নির্ভরযোগ্য ডেলিভারি",
+  "notificationsBatteryHelperBody": "আযকারকে ব্যাকগ্রাউন্ডে চলতে দিন যেন রিমাইন্ডার সঠিক সময়ে আসে।",
+  "notificationsBatteryHelperAction": "ব্যাকগ্রাউন্ড কার্যকলাপ অনুমোদন করুন",
+  "notificationsBatteryHelperOemHint": "কিছু ফোনে (Xiaomi, Huawei, Samsung) রিমাইন্ডার মিস হলে ব্যাটারি সেভার সেটিংস দেখুন।"
+}

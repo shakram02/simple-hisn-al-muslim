@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Launcher / app-name strings. The default below is the fallback used
+  when the device locale doesn't match any of the values-XX/ overlays.
+  Each supported locale has its own values-XX/strings.xml with the
+  appropriate localized label (matching the in-app `appTitle` for that
+  locale, with Arabic preserving the longer historical title).
+-->
+<resources>
+    <string name="app_name">Hisnul Muslim</string>
+</resources>

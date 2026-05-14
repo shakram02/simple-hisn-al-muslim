@@ -1,0 +1,78 @@
+{
+  "@@locale": "id",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Sebarkan kebaikan",
+  "shareWithUsSubtitle": "Bagikan dengan teman",
+
+  "rateApp": "Beri rating Azkar",
+  "rateAppSubtitle": "Tulis ulasan singkat",
+
+
+  "previous": "Sebelumnya",
+  "next": "Berikutnya",
+
+  "pageCounter": "{current} dari {total}",
+
+  "done": "Selesai ✓",
+
+  "addToFavorites": "Tambahkan ke favorit",
+  "removeFromFavorites": "Hapus dari favorit",
+
+  "favorites": "Favorit",
+  "allCategories": "Semua kategori",
+
+  "exitConfirmationTitle": "Keluar dari sesi?",
+  "exitConfirmationBody": "Kemajuan Anda akan hilang. Apakah Anda yakin ingin keluar?",
+
+  "cancel": "Batal",
+  "exit": "Keluar",
+  "ok": "OK",
+
+  "fontSize": "Ukuran font",
+  "sampleText": "Contoh teks",
+
+  "language": "Bahasa",
+
+  "shareAppSubject": "Azkar — Adhkar pagi & malam yang mudah",
+  "shareAppBody": "🤲 Azkar — Adhkar pagi & malam yang mudah\n\nAplikasi gratis untuk membantu Anda menjaga zikir harian dari Hisnul Muslim.\n\n✨ Fitur:\n• Zikir pagi & petang\n• Zikir tidur & bangun\n• Penghitung sentuhan\n• Bekerja secara offline\n• Sepenuhnya gratis, tanpa iklan\n\nUnduh sekarang:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Pengaturan",
+  "settingsDisplay": "Tampilan",
+  "settingsLanguage": "Bahasa",
+  "settingsTheme": "Mode gelap",
+
+  "searchHint": "Cari adhkar",
+  "searchNoResults": "Tidak ada hasil",
+
+  "audioPlay": "Putar bacaan",
+  "audioStop": "Hentikan bacaan",
+  "audioDownloadFailed": "Tidak dapat memuat audio. Periksa koneksi Anda.",
+
+  "onboardingWelcome": "Selamat datang di Azkar",
+  "onboardingDescription": "Zikir harian dari Hisnul Muslim, dalam bahasa Anda.",
+  "onboardingPickLanguage": "Pilih bahasa Anda",
+  "onboardingTapToCountTitle": "Ketuk untuk menghitung",
+  "onboardingTapToCountBody": "Ketuk kartu zikir untuk menambah penghitung. Akan otomatis berpindah ke zikir berikutnya saat selesai.",
+  "onboardingSwipeTitle": "Gunakan tombol untuk navigasi",
+  "onboardingSwipeBody": "Ketuk Sebelumnya dan Berikutnya untuk berpindah antar zikir dalam kategori.",
+  "onboardingContinue": "Lanjutkan",
+  "onboardingGetStarted": "Mulai",
+
+  "notificationMorningTitle": "Saatnya zikir pagi",
+  "notificationMorningBody": "Sejenak untuk memulai hari dengan zikir.",
+  "notificationEveningTitle": "Saatnya zikir petang",
+  "notificationEveningBody": "Sejenak untuk memulai petang dengan zikir.",
+  "notificationsScreenTitle": "Pengingat",
+  "notificationsScreenIntro": "Pengingat ringan untuk zikir pagi dan petang.",
+  "notificationsMorningLabel": "Zikir pagi",
+  "notificationsEveningLabel": "Zikir petang",
+  "notificationsChannelName": "Pengingat Azkar",
+  "notificationsPermissionDenied": "Notifikasi dimatikan di pengaturan perangkat Anda.",
+  "notificationsPermissionDeniedAction": "Buka pengaturan",
+  "notificationsBatteryHelperTitle": "Pengiriman andal",
+  "notificationsBatteryHelperBody": "Izinkan Azkar berjalan di latar belakang agar pengingat muncul tepat waktu.",
+  "notificationsBatteryHelperAction": "Izinkan aktivitas latar belakang",
+  "notificationsBatteryHelperOemHint": "Pada beberapa ponsel (Xiaomi, Huawei, Samsung), periksa pengaturan hemat baterai jika pengingat masih terlewat."
+}

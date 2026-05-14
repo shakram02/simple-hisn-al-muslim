@@ -1,0 +1,78 @@
+{
+  "@@locale": "es",
+
+  "appTitle": "Hisnul Muslim",
+
+  "shareWithUs": "Comparte el bien",
+  "shareWithUsSubtitle": "Compártelo con un amigo",
+
+  "rateApp": "Valorar Azkar",
+  "rateAppSubtitle": "Deja una breve reseña",
+
+
+  "previous": "Anterior",
+  "next": "Siguiente",
+
+  "pageCounter": "{current} de {total}",
+
+  "done": "Hecho ✓",
+
+  "addToFavorites": "Añadir a favoritos",
+  "removeFromFavorites": "Quitar de favoritos",
+
+  "favorites": "Favoritos",
+  "allCategories": "Todas las categorías",
+
+  "exitConfirmationTitle": "¿Salir de la sesión?",
+  "exitConfirmationBody": "Se perderá tu progreso. ¿Seguro que quieres salir?",
+
+  "cancel": "Cancelar",
+  "exit": "Salir",
+  "ok": "OK",
+
+  "fontSize": "Tamaño de letra",
+  "sampleText": "Texto de ejemplo",
+
+  "language": "Idioma",
+
+  "shareAppSubject": "Azkar — Adhkar de la mañana y la tarde, fácil",
+  "shareAppBody": "🤲 Azkar — Adhkar de la mañana y la tarde\n\nUna aplicación gratuita que te ayuda a mantener tus adhkar diarios del Hisnul Muslim.\n\n✨ Características:\n• Adhkar de la mañana y la tarde\n• Adhkar al dormir y al despertar\n• Contador con un toque\n• Funciona sin conexión\n• Totalmente gratis, sin anuncios\n\nDescárgala ahora:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "Ajustes",
+  "settingsDisplay": "Pantalla",
+  "settingsLanguage": "Idioma",
+  "settingsTheme": "Modo oscuro",
+
+  "searchHint": "Buscar adhkar",
+  "searchNoResults": "Sin resultados",
+
+  "audioPlay": "Reproducir recitación",
+  "audioStop": "Detener recitación",
+  "audioDownloadFailed": "No se pudo cargar el audio. Comprueba tu conexión.",
+
+  "onboardingWelcome": "Bienvenido a Azkar",
+  "onboardingDescription": "Adhkar diarios del Hisnul Muslim, en tu idioma.",
+  "onboardingPickLanguage": "Elige tu idioma",
+  "onboardingTapToCountTitle": "Toca para contar",
+  "onboardingTapToCountBody": "Toca la tarjeta del zikr para avanzar el contador. Pasa al siguiente automáticamente al completarse.",
+  "onboardingSwipeTitle": "Usa los botones para navegar",
+  "onboardingSwipeBody": "Toca Anterior y Siguiente para moverte entre los adhkar de una categoría.",
+  "onboardingContinue": "Continuar",
+  "onboardingGetStarted": "Empezar",
+
+  "notificationMorningTitle": "Es hora de los adhkar de la mañana",
+  "notificationMorningBody": "Un momento sereno para comenzar el día con los adhkar.",
+  "notificationEveningTitle": "Es hora de los adhkar de la tarde",
+  "notificationEveningBody": "Un momento sereno para comenzar la tarde con los adhkar.",
+  "notificationsScreenTitle": "Recordatorios",
+  "notificationsScreenIntro": "Recordatorios discretos para los adhkar de la mañana y la tarde.",
+  "notificationsMorningLabel": "Adhkar de la mañana",
+  "notificationsEveningLabel": "Adhkar de la tarde",
+  "notificationsChannelName": "Recordatorios de adhkar",
+  "notificationsPermissionDenied": "Las notificaciones están desactivadas en los ajustes de tu dispositivo.",
+  "notificationsPermissionDeniedAction": "Abrir ajustes",
+  "notificationsBatteryHelperTitle": "Entrega fiable",
+  "notificationsBatteryHelperBody": "Permite que Azkar funcione en segundo plano para que los recordatorios lleguen a tiempo.",
+  "notificationsBatteryHelperAction": "Permitir actividad en segundo plano",
+  "notificationsBatteryHelperOemHint": "En algunos teléfonos (Xiaomi, Huawei, Samsung), revisa los ajustes de ahorro de batería si los recordatorios fallan."
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Somali uses X for the Arabic pharyngeal ح. "Xisnul Muslim" is
+         the standard Somali Islamic-publishing transliteration of
+         حصن المسلم. -->
+    <string name="app_name">Xisnul Muslim</string>
+</resources>

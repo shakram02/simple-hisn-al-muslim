@@ -14,6 +14,7 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		D15CE0030000000000000000 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D15CE0020000000000000000 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,21 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15CE0010000000000000001 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000002 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000003 /* bs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bs; path = bs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000004 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000005 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000006 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000007 /* ha */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ha; path = ha.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000008 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE0010000000000000009 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000B /* so */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = so; path = so.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000C /* sw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sw; path = sw.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000D /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000E /* yo */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = yo; path = yo.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D15CE001000000000000000F /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +129,7 @@
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
+				D15CE0020000000000000000 /* InfoPlist.strings */,
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
@@ -188,6 +205,20 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				bn,
+				bs,
+				es,
+				fa,
+				ha,
+				hi,
+				id,
+				pt,
+				so,
+				sw,
+				th,
+				yo,
+				zh,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
@@ -216,6 +247,7 @@
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+				D15CE0030000000000000000 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +330,28 @@
 				97C147001CF9000F007C117D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D15CE0020000000000000000 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D15CE0010000000000000001 /* ar */,
+				D15CE0010000000000000002 /* bn */,
+				D15CE0010000000000000003 /* bs */,
+				D15CE0010000000000000004 /* en */,
+				D15CE0010000000000000005 /* es */,
+				D15CE0010000000000000006 /* fa */,
+				D15CE0010000000000000007 /* ha */,
+				D15CE0010000000000000008 /* hi */,
+				D15CE0010000000000000009 /* id */,
+				D15CE001000000000000000A /* pt */,
+				D15CE001000000000000000B /* so */,
+				D15CE001000000000000000C /* sw */,
+				D15CE001000000000000000D /* th */,
+				D15CE001000000000000000E /* yo */,
+				D15CE001000000000000000F /* zh */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

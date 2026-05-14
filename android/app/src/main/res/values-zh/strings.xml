@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard Mandarin transliteration in Chinese Islamic publishing.
+         Pronounced "Xī sī nǔ ěr · Mù sī lín" ≈ "Hisnul Muslim". -->
+    <string name="app_name">希斯努尔·穆斯林</string>
+</resources>

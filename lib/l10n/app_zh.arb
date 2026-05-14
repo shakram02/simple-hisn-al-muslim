@@ -1,0 +1,78 @@
+{
+  "@@locale": "zh",
+
+  "appTitle": "希斯努尔·穆斯林",
+
+  "shareWithUs": "传播善行",
+  "shareWithUsSubtitle": "分享给朋友",
+
+  "rateApp": "评价 Azkar",
+  "rateAppSubtitle": "留下简短评论",
+
+
+  "previous": "上一页",
+  "next": "下一页",
+
+  "pageCounter": "第 {current} 项，共 {total} 项",
+
+  "done": "完成 ✓",
+
+  "addToFavorites": "添加到收藏",
+  "removeFromFavorites": "从收藏中移除",
+
+  "favorites": "收藏",
+  "allCategories": "全部分类",
+
+  "exitConfirmationTitle": "退出本次诵念？",
+  "exitConfirmationBody": "您的进度将会丢失，确定要退出吗？",
+
+  "cancel": "取消",
+  "exit": "退出",
+  "ok": "确定",
+
+  "fontSize": "字体大小",
+  "sampleText": "示例文字",
+
+  "language": "语言",
+
+  "shareAppSubject": "Azkar — 简易的晨昏念词",
+  "shareAppBody": "🤲 Azkar — 简易的晨昏念词\n\n一款免费应用，帮助您坚持《穆斯林堡垒》中的每日念词。\n\n✨ 特点：\n• 晨昏念词\n• 睡前与起身念词\n• 点击计数\n• 离线使用\n• 完全免费，无广告\n\n立即下载：\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "设置",
+  "settingsDisplay": "显示",
+  "settingsLanguage": "语言",
+  "settingsTheme": "深色模式",
+
+  "searchHint": "搜索念词",
+  "searchNoResults": "未找到结果",
+
+  "audioPlay": "播放诵念",
+  "audioStop": "停止诵念",
+  "audioDownloadFailed": "音频加载失败，请检查您的网络连接。",
+
+  "onboardingWelcome": "欢迎使用 Azkar",
+  "onboardingDescription": "《穆斯林堡垒》中的每日念词，以您的语言呈现。",
+  "onboardingPickLanguage": "选择您的语言",
+  "onboardingTapToCountTitle": "点击计数",
+  "onboardingTapToCountBody": "点击念词卡片以递增计数，完成后会自动跳到下一项。",
+  "onboardingSwipeTitle": "使用按钮翻页",
+  "onboardingSwipeBody": "点击「上一页」与「下一页」在同一分类内切换念词。",
+  "onboardingContinue": "继续",
+  "onboardingGetStarted": "开始",
+
+  "notificationMorningTitle": "晨间念词时间到了",
+  "notificationMorningBody": "用片刻的宁静以念词开启新的一天。",
+  "notificationEveningTitle": "晚间念词时间到了",
+  "notificationEveningBody": "用片刻的宁静以念词开启夜晚。",
+  "notificationsScreenTitle": "提醒",
+  "notificationsScreenIntro": "晨晚念词的安静提醒。",
+  "notificationsMorningLabel": "晨间念词",
+  "notificationsEveningLabel": "晚间念词",
+  "notificationsChannelName": "Azkar 提醒",
+  "notificationsPermissionDenied": "通知已在设备设置中关闭。",
+  "notificationsPermissionDeniedAction": "打开设置",
+  "notificationsBatteryHelperTitle": "可靠送达",
+  "notificationsBatteryHelperBody": "允许 Azkar 在后台运行，提醒才能准时到达。",
+  "notificationsBatteryHelperAction": "允许后台活动",
+  "notificationsBatteryHelperOemHint": "在某些手机（小米、华为、三星）上，如果提醒仍然漏掉，请检查省电设置。"
+}

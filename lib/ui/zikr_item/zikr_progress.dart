@@ -1,6 +1,8 @@
 import 'package:azkar/constants.dart';
-import 'package:flutter/material.dart';
+import 'package:azkar/l10n/app_localizations.dart';
 import 'package:azkar/ui/arabic_numbers.dart';
+import 'package:azkar/ui/components/app_colors.dart';
+import 'package:flutter/material.dart';
 
 class ZikrProgress extends StatelessWidget {
   final int count;
@@ -18,33 +20,33 @@ class ZikrProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isCompleted = count == maxCount;
-    final arabicCount = arabicNumber(count);
-    final arabicMaxCount = arabicNumber(maxCount);
+    final isDone = count == maxCount;
+    final l10n = AppLocalizations.of(context);
+    final locale = Localizations.localeOf(context);
+    final current = localizedNumber(count, locale);
+    final total = localizedNumber(maxCount, locale);
+    final label = isDone ? l10n.done : l10n.pageCounter(current, total);
+
+    final colors = AppColors.of(context);
 
     return Column(
       children: [
         Text(
-          isCompleted ? 'تم ✓' : '$arabicCount من $arabicMaxCount',
+          label,
+          // Done state: gold. Reserved for completion moments — gives
+          // the "X of Y" → "done ✓" transition its gilt-manuscript
+          // emotional payoff.
           style: TextStyle(
-            // fontSize: fontSize - 2,
-            // fontWeight: FontWeight.bold,
-            color: isCompleted
-                ? AppTheme.secondaryColor
-                : Theme.of(context).brightness == Brightness.dark
-                    ? AppTheme.darkTextSecondary
-                : AppTheme.mutedColor.shade700,
+            color: isDone ? colors.secondary : colors.textSecondary,
           ),
         ),
         const SizedBox(height: 8),
         LinearProgressIndicator(
           value: count / maxCount,
           backgroundColor: AppTheme.mutedColor.shade300,
-          valueColor: AlwaysStoppedAnimation<Color>(
-            Theme.of(context).brightness == Brightness.dark
-                ? AppTheme.darkSecondary
-                : AppTheme.secondaryColor,
-          ),
+          // Primary (teal) for the in-progress fill — gold is only
+          // earned at completion, not gradually approached.
+          valueColor: AlwaysStoppedAnimation<Color>(colors.primary),
         ),
       ],
     );

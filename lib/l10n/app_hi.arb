@@ -1,0 +1,78 @@
+{
+  "@@locale": "hi",
+
+  "appTitle": "हिसनुल मुस्लिम",
+
+  "shareWithUs": "भलाई फैलाएँ",
+  "shareWithUsSubtitle": "किसी मित्र के साथ साझा करें",
+
+  "rateApp": "अज़कार को रेट करें",
+  "rateAppSubtitle": "एक छोटी समीक्षा छोड़ें",
+
+
+  "previous": "पिछला",
+  "next": "अगला",
+
+  "pageCounter": "{total} में से {current}",
+
+  "done": "हो गया ✓",
+
+  "addToFavorites": "पसंदीदा में जोड़ें",
+  "removeFromFavorites": "पसंदीदा से हटाएँ",
+
+  "favorites": "पसंदीदा",
+  "allCategories": "सभी श्रेणियाँ",
+
+  "exitConfirmationTitle": "क्या आप बाहर निकलना चाहते हैं?",
+  "exitConfirmationBody": "आपकी प्रगति खो जाएगी। क्या आप वाकई बाहर निकलना चाहते हैं?",
+
+  "cancel": "रद्द करें",
+  "exit": "बाहर निकलें",
+  "ok": "ठीक है",
+
+  "fontSize": "फ़ॉन्ट का आकार",
+  "sampleText": "नमूना पाठ",
+
+  "language": "भाषा",
+
+  "shareAppSubject": "अज़कार — सुबह और शाम के आसान अज़कार",
+  "shareAppBody": "🤲 अज़कार — सुबह और शाम के आसान अज़कार\n\nएक मुफ़्त ऐप जो आपको हिसनुल मुस्लिम के दैनिक अज़कार पढ़ने में मदद करता है।\n\n✨ विशेषताएँ:\n• सुबह और शाम के अज़कार\n• सोने और जागने के अज़कार\n• टैप करके गिनती\n• ऑफ़लाइन काम करता है\n• पूरी तरह मुफ़्त, बिना विज्ञापन\n\nअभी डाउनलोड करें:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "सेटिंग्स",
+  "settingsDisplay": "डिस्प्ले",
+  "settingsLanguage": "भाषा",
+  "settingsTheme": "डार्क मोड",
+
+  "searchHint": "अज़कार खोजें",
+  "searchNoResults": "कोई परिणाम नहीं",
+
+  "audioPlay": "तिलावत चलाएँ",
+  "audioStop": "तिलावत रोकें",
+  "audioDownloadFailed": "ऑडियो लोड नहीं हो सका। अपना कनेक्शन जाँचें।",
+
+  "onboardingWelcome": "अज़कार में स्वागत है",
+  "onboardingDescription": "हिसनुल मुस्लिम के दैनिक अज़कार, आपकी भाषा में।",
+  "onboardingPickLanguage": "अपनी भाषा चुनें",
+  "onboardingTapToCountTitle": "गिनने के लिए टैप करें",
+  "onboardingTapToCountBody": "ज़िक्र कार्ड पर टैप करके गिनती बढ़ाएँ। पूरा होने पर अगले ज़िक्र पर अपने आप चला जाएगा।",
+  "onboardingSwipeTitle": "नेविगेट करने के लिए बटन का इस्तेमाल करें",
+  "onboardingSwipeBody": "किसी श्रेणी के ज़िक्रों के बीच जाने के लिए पिछला और अगला बटन दबाएँ।",
+  "onboardingContinue": "जारी रखें",
+  "onboardingGetStarted": "शुरू करें",
+
+  "notificationMorningTitle": "सुबह के अज़कार का समय हो गया",
+  "notificationMorningBody": "अज़कार के साथ अपना दिन शुरू करने के लिए कुछ शांत पल।",
+  "notificationEveningTitle": "शाम के अज़कार का समय हो गया",
+  "notificationEveningBody": "अज़कार के साथ अपनी शाम शुरू करने के लिए कुछ शांत पल।",
+  "notificationsScreenTitle": "रिमाइंडर",
+  "notificationsScreenIntro": "सुबह और शाम के अज़कार के लिए शांत रिमाइंडर।",
+  "notificationsMorningLabel": "सुबह के अज़कार",
+  "notificationsEveningLabel": "शाम के अज़कार",
+  "notificationsChannelName": "अज़कार रिमाइंडर",
+  "notificationsPermissionDenied": "आपके डिवाइस की सेटिंग्स में नोटिफिकेशन बंद हैं।",
+  "notificationsPermissionDeniedAction": "सेटिंग्स खोलें",
+  "notificationsBatteryHelperTitle": "विश्वसनीय डिलीवरी",
+  "notificationsBatteryHelperBody": "अज़कार को बैकग्राउंड में चलने दें ताकि रिमाइंडर समय पर आएं।",
+  "notificationsBatteryHelperAction": "बैकग्राउंड गतिविधि की अनुमति दें",
+  "notificationsBatteryHelperOemHint": "कुछ फ़ोन (Xiaomi, Huawei, Samsung) में रिमाइंडर मिस होने पर बैटरी सेवर सेटिंग्स देखें।"
+}

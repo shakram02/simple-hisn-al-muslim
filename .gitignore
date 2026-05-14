@@ -51,3 +51,6 @@ app.*.map.json
 
 # Flutter DevTools per-project settings
 /devtools_options.yaml
+
+# Claude Code local state (settings.local.json, scheduled task locks)
+.claude/

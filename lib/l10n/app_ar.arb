@@ -1,0 +1,78 @@
+{
+  "@@locale": "ar",
+
+  "appTitle": "حصن المسلم",
+
+  "shareWithUs": "شاركنا الأجر",
+  "shareWithUsSubtitle": "شارك مع صديق",
+
+  "rateApp": "قيّم أذكار",
+  "rateAppSubtitle": "اترك تقييمًا قصيرًا",
+
+
+  "previous": "السابق",
+  "next": "التالي",
+
+  "pageCounter": "{current} من {total}",
+
+  "done": "تم ✓",
+
+  "addToFavorites": "إضافة للمفضلة",
+  "removeFromFavorites": "إزالة من المفضلة",
+
+  "favorites": "المفضلة",
+  "allCategories": "كل الأذكار",
+
+  "exitConfirmationTitle": "تأكيد الخروج",
+  "exitConfirmationBody": "سيتم فقدان تقدمك. هل تريد الخروج؟",
+
+  "cancel": "إلغاء",
+  "exit": "خروج",
+  "ok": "موافق",
+
+  "fontSize": "حجم الخط",
+  "sampleText": "مثال للنص",
+
+  "language": "اللغة",
+
+  "shareAppSubject": "تطبيق أذكار الصباح والمساء الميسرة",
+  "shareAppBody": "🤲 أذكار الصباح والمساء الميسرة\n\nتطبيق مجاني يساعدك على المحافظة على الأذكار اليومية من كتاب حصن المسلم\n\n✨ مميزات التطبيق:\n• أذكار الصباح والمساء\n• أذكار النوم والاستيقاظ\n• عداد للأذكار\n• يعمل بدون إنترنت\n• مجاني تماماً وبدون إعلانات\n\nحمل التطبيق الآن:\nhttps://play.google.com/store/apps/details?id=com.github.shakram02.azkar",
+
+  "settings": "الإعدادات",
+  "settingsDisplay": "العرض",
+  "settingsLanguage": "اللغة",
+  "settingsTheme": "الوضع الداكن",
+
+  "searchHint": "ابحث في الأذكار",
+  "searchNoResults": "لا توجد نتائج",
+
+  "audioPlay": "تشغيل التلاوة",
+  "audioStop": "إيقاف التلاوة",
+  "audioDownloadFailed": "تعذّر تحميل الصوت. تأكد من اتصالك بالإنترنت.",
+
+  "onboardingWelcome": "مرحبًا بك في أذكار",
+  "onboardingDescription": "أذكار يومية من حصن المسلم، بلغتك.",
+  "onboardingPickLanguage": "اختر لغتك",
+  "onboardingTapToCountTitle": "اضغط للعدّ",
+  "onboardingTapToCountBody": "اضغط على بطاقة الذكر لزيادة العدّاد. سينتقل تلقائيًا إلى الذكر التالي عند الإكمال.",
+  "onboardingSwipeTitle": "تنقّل عبر الأزرار",
+  "onboardingSwipeBody": "اضغط السابق والتالي للتنقّل بين أذكار الفئة.",
+  "onboardingContinue": "متابعة",
+  "onboardingGetStarted": "ابدأ",
+
+  "notificationMorningTitle": "حان وقت أذكار الصباح",
+  "notificationMorningBody": "دقائق قليلة لتبدأ بها يومك بالأذكار.",
+  "notificationEveningTitle": "حان وقت أذكار المساء",
+  "notificationEveningBody": "دقائق قليلة لتبدأ بها مساءك بالأذكار.",
+  "notificationsScreenTitle": "التذكيرات",
+  "notificationsScreenIntro": "تذكيرات هادئة بأذكار الصباح والمساء.",
+  "notificationsMorningLabel": "أذكار الصباح",
+  "notificationsEveningLabel": "أذكار المساء",
+  "notificationsChannelName": "تذكيرات الأذكار",
+  "notificationsPermissionDenied": "الإشعارات معطّلة في إعدادات جهازك.",
+  "notificationsPermissionDeniedAction": "فتح الإعدادات",
+  "notificationsBatteryHelperTitle": "تشغيل موثوق",
+  "notificationsBatteryHelperBody": "اسمح لتطبيق أذكار بالعمل في الخلفية حتى تصل التذكيرات في وقتها.",
+  "notificationsBatteryHelperAction": "السماح بالعمل في الخلفية",
+  "notificationsBatteryHelperOemHint": "في بعض الأجهزة (شاومي وهواوي وسامسونج) راجع إعدادات توفير البطارية إذا لم تصل التذكيرات."
+}
