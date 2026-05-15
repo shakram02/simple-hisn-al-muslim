@@ -54,3 +54,6 @@ app.*.map.json
 
 # Claude Code local state (settings.local.json, scheduled task locks)
 .claude/
+
+# Kotlin compiler daemon session state (transient build artifact)
+android/.kotlin/

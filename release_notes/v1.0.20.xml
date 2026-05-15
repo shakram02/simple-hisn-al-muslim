@@ -1,0 +1,167 @@
+<!--
+  Release notes for Hisnul Muslim v1.0.20 (build 11).
+  Tag names below use Google Play Console language codes. Paste each
+  body into the matching locale slot in Play Console / App Store
+  Connect.
+
+  Not supported by Google Play Console (4 of our 15 in-app locales):
+  Bosnian (bs), Hausa (ha), Somali (so), Yoruba (yo). Play will fall
+  back to en-US for users on those locales. Translated copy for them
+  is kept below for App Store Connect and in-app use.
+-->
+
+<en-US>
+What's new
+• You can now enable both morning and evening reminders at the same time.
+• Audio recitation now plays reliably — no more "couldn't load audio".
+• Search now finds category titles written in Arabic.
+• On non-Arabic languages, the transliteration is shown first as the main reading text, with the translation underneath as a note. Quranic verses still show Arabic first.
+• App name on the home screen now appears in your language.
+• Smoother animation when you finish a zikr.
+</en-US>
+
+<ar>
+ما الجديد
+• يمكنك الآن تفعيل تذكيري الصباح والمساء معًا.
+• تشغيل التلاوة الصوتية يعمل بشكل موثوق.
+• البحث يجد الآن عناوين الفئات المكتوبة بالعربية.
+• في اللغات غير العربية، يظهر النطق اللاتيني أولًا كنص أساسي للقراءة، والترجمة تحته كملاحظة. آيات القرآن تبقى بالعربية أولًا.
+• اسم التطبيق على الشاشة الرئيسية يظهر بلغتك.
+• حركة أنعم عند إتمام الذكر.
+</ar>
+
+<bn-BD>
+নতুন কী
+• এখন সকাল ও সন্ধ্যা—উভয় রিমাইন্ডার একসাথে চালু করা যাবে।
+• অডিও তিলাওয়াত এখন নির্ভরযোগ্যভাবে বাজে।
+• আরবিতে লেখা ক্যাটেগরির শিরোনাম এখন অনুসন্ধানে পাওয়া যায়।
+• অ-আরবি ভাষায়, ট্রান্সলিটারেশন এখন মূল পাঠ্য হিসেবে উপরে দেখানো হয়, অনুবাদ নিচে নোট হিসেবে। কুরআনের আয়াত এখনও আরবি আগে দেখায়।
+• হোম স্ক্রিনে অ্যাপের নাম আপনার ভাষায় দেখানো হয়।
+• ফিনিশ করার সময় মসৃণ অ্যানিমেশন।
+</bn-BD>
+
+<es-ES>
+Novedades
+• Ya puedes activar a la vez los recordatorios de la mañana y de la noche.
+• La recitación en audio funciona de forma fiable.
+• La búsqueda ya encuentra los títulos de categorías escritos en árabe.
+• En idiomas no árabes, la transliteración aparece primero como texto principal y la traducción debajo como nota. El Corán sigue mostrándose en árabe primero.
+• El nombre de la app aparece en tu idioma.
+• Animación más fluida al completar un dhikr.
+</es-ES>
+
+<fa>
+چه چیز جدید است
+• اکنون می‌توانید یادآور صبح و عصر را هم‌زمان فعال کنید.
+• تلاوت صوتی به‌طور قابل اعتماد پخش می‌شود.
+• جستجو اکنون عنوان دسته‌بندی‌های نوشته‌شده به عربی را پیدا می‌کند.
+• در زبان‌های غیر عربی، حرف‌نویسی به‌عنوان متن اصلی خواندن در بالا و ترجمه به‌عنوان توضیح در پایین نمایش داده می‌شود. آیات قرآن همچنان اول عربی نشان داده می‌شوند.
+• نام برنامه روی صفحه اصلی به زبان شما نمایش داده می‌شود.
+• انیمیشن نرم‌تر هنگام پایان ذکر.
+</fa>
+
+<hi-IN>
+क्या नया है
+• अब आप सुबह और शाम दोनों रिमाइंडर एक साथ चालू कर सकते हैं।
+• ऑडियो तिलावत अब विश्वसनीय रूप से चलती है।
+• खोज अब अरबी में लिखे श्रेणी शीर्षक भी ढूँढ़ती है।
+• गैर-अरबी भाषाओं में, लिप्यंतरण अब मुख्य पाठ के रूप में ऊपर दिखाया जाता है और अनुवाद नीचे एक नोट के रूप में। कुरआनी आयतें अभी भी अरबी पहले दिखाती हैं।
+• होम स्क्रीन पर ऐप का नाम अब आपकी भाषा में दिखता है।
+• ज़िक्र पूरा करने पर अधिक सहज एनिमेशन।
+</hi-IN>
+
+<id>
+Yang baru
+• Anda kini dapat mengaktifkan pengingat pagi dan sore secara bersamaan.
+• Tilawah audio kini berfungsi dengan andal.
+• Pencarian kini menemukan judul kategori yang ditulis dalam bahasa Arab.
+• Pada bahasa non-Arab, transliterasi kini ditampilkan di atas sebagai teks bacaan utama, dengan terjemahan di bawah sebagai catatan. Ayat Al-Qur'an tetap menampilkan Arab di atas.
+• Nama aplikasi di layar utama kini tampil dalam bahasa Anda.
+• Animasi yang lebih halus saat menyelesaikan zikir.
+</id>
+
+<pt-PT>
+Novidades
+• Pode agora ativar os lembretes da manhã e da noite ao mesmo tempo.
+• A recitação em áudio funciona de forma fiável.
+• A pesquisa encontra agora os títulos de categorias escritos em árabe.
+• Em idiomas não árabes, a transliteração aparece primeiro como texto principal de leitura e a tradução por baixo como uma nota. Os versículos do Alcorão continuam a mostrar árabe primeiro.
+• O nome da aplicação no ecrã inicial aparece agora no seu idioma.
+• Animação mais suave ao concluir um zikr.
+</pt-PT>
+
+<sw>
+Mpya
+• Sasa unaweza kuwasha vikumbusho vya asubuhi na jioni kwa wakati mmoja.
+• Tilawa ya sauti inafanya kazi kwa uhakika.
+• Utafutaji sasa unapata vichwa vya kategoria vilivyoandikwa kwa Kiarabu.
+• Katika lugha zisizo za Kiarabu, maandishi ya kifonetiki sasa yanaonyeshwa juu kama maandishi makuu ya kusoma, na tafsiri chini kama maelezo. Aya za Qurani bado zinaonyesha Kiarabu kwanza.
+• Jina la programu linaonyeshwa kwa lugha yako.
+• Uhuishaji laini zaidi unapomaliza dhikr.
+</sw>
+
+<th>
+มีอะไรใหม่
+• ตอนนี้คุณสามารถเปิดใช้การแจ้งเตือนตอนเช้าและตอนเย็นพร้อมกันได้
+• เสียงการอ่านทำงานได้อย่างน่าเชื่อถือ
+• การค้นหาพบชื่อหมวดหมู่ที่เขียนเป็นภาษาอาหรับแล้ว
+• ในภาษาที่ไม่ใช่อาหรับ คำทับศัพท์จะแสดงด้านบนเป็นข้อความหลักในการอ่าน และคำแปลด้านล่างเป็นหมายเหตุ รายการอัลกุรอานยังคงแสดงภาษาอาหรับก่อน
+• ชื่อแอปบนหน้าจอหลักแสดงเป็นภาษาของคุณแล้ว
+• แอนิเมชั่นที่ลื่นไหลขึ้นเมื่อทำซิกร์เสร็จ
+</th>
+
+<zh-CN>
+新内容
+• 现在可以同时启用早晨和傍晚两个提醒。
+• 音频诵读现在可以稳定播放。
+• 搜索现在可以找到用阿拉伯语书写的类别标题。
+• 在非阿拉伯语界面中,音译现在显示在上方作为主要阅读文本,翻译显示在下方作为注释。古兰经条目仍以阿拉伯语优先。
+• 主屏幕上的应用名称现在以您的语言显示。
+• 完成迪克尔时动画更流畅。
+</zh-CN>
+
+<!--
+  The following four locales are NOT supported by Google Play
+  Console. Use them for App Store Connect (where supported) or
+  future in-app what's-new screens.
+-->
+
+<bs>
+Što je novo
+• Sada možeš istovremeno uključiti jutarnji i večernji podsjetnik.
+• Audio recitacija sada radi pouzdano.
+• Pretraga sada pronalazi naslove kategorija napisane na arapskom.
+• Na nearapskim jezicima, transliteracija se sada prikazuje na vrhu kao glavni tekst za čitanje, a prijevod ispod kao napomena. Kuranski ajeti i dalje prikazuju arapski prvi.
+• Naziv aplikacije na početnom ekranu sada se prikazuje na tvom jeziku.
+• Glađa animacija pri završetku zikra.
+</bs>
+
+<ha>
+Sabbin abubuwa
+• Yanzu kana iya kunna tunatarwar safiya da maraice tare.
+• Karatun sauti yana aiki da gaskiya.
+• Bincike yanzu yana samun sunayen rukunan da aka rubuta da Larabci.
+• A harsuna ba na Larabci ba, rubutun harafi yanzu ana nuna shi a sama a matsayin babban rubutu na karatu, kuma fassara a ƙasa a matsayin bayani. Ayoyin Alkur'ani har yanzu suna nuna Larabci a farkon.
+• Sunan manhajar a allon farko yanzu yana bayyana cikin harshenku.
+• Mafi sauƙin motsi yayin kammala zikr.
+</ha>
+
+<so>
+Waxa cusub
+• Hadda waxaad furi kartaa xusuusiyada subaxda iyo fiidnimada hal mar.
+• Akhriska codka ah wuxuu si la isku halayn karo u shaqeeyaa.
+• Raadinta hadda waxay heli kartaa cinwaannada qaybaha ee Carabi ku qoran.
+• Luqadaha aan Carabiga ahayn, erayada-Laatiin hadda waxay ka muuqdaan kor sida qoraalka koowaad ee akhriska, turjumaaddu hoose tahay sida qoraal-faallo. Aayaadaha Quraanka weli waxay tusayaan Carabiga horeeya.
+• Magaca barnaamijka shaashadda hore hadda wuxuu ku soo baxaa luqaddaada.
+• Filim-yarayn jilicsan markaad dhamaystirto dhikr.
+</so>
+
+<yo>
+Kíni tuntun
+• Báyìí o le mú àwọn olùrántí àárọ̀ àti alẹ́ ṣiṣẹ́ papọ̀.
+• Kíkà ariwo ń ṣiṣẹ́ pẹ̀lú ìgbẹ́kẹ̀lé.
+• Ìwáàrì rí àwọn àkọlé ẹgbẹ́ tí a kọ ní Lárúbáwá nísinsìnyí.
+• Ní àwọn èdè tí kì í ṣe Lárúbáwá, àyípadà-akọsílẹ̀ ni a fihan ní òkè báyìí gẹ́gẹ́ bí àkọsílẹ̀ pàtàkì fún kíkà, ìtumọ̀ nísàlẹ̀ gẹ́gẹ́ bí àkọsílẹ̀-ìránti. Àwọn ẹsẹ Kurani ṣì ń fihan Lárúbáwá ní iwájú.
+• Orúkọ ohun èlò lórí ojú-ìbẹ̀rẹ̀ wà ní èdè rẹ báyìí.
+• Ìmúrasílẹ̀ tí ó dára síi nígbà tí o bá parí zikr.
+</yo>

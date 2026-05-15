@@ -235,8 +235,16 @@ class _ZikrCategoryDetailScreenState extends State<ZikrCategoryDetailScreen> {
         // edge-to-edge gesture nav.
         body: SafeArea(
           top: false,
-          child: GestureDetector(
-            onTap: _resetWakelockTimer,
+          // Listener (not GestureDetector) — observes raw pointer events
+          // before the gesture arena resolves them, so it fires even when
+          // descendants (ZikrItemCard's onTap, the prev/next TextButtons)
+          // win the arena. A GestureDetector here only fires on taps
+          // outside any child's hit-test area, which in this screen is
+          // effectively never — leaving the wakelock timer pinned to
+          // initState and disabling itself after 10 min regardless of how
+          // actively the user is counting.
+          child: Listener(
+            onPointerDown: (_) => _resetWakelockTimer(),
             child: Column(
               children: [
                 Container(
